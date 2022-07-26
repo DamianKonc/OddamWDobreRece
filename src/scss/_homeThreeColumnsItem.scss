@@ -1,0 +1,24 @@
+.homeThreeColumnsItem {
+  max-width: 334px;
+}
+
+.homeThreeColumnsItem__counter {
+  font-size: 9rem;
+  font-weight: 300;
+  color: $color-secondary;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.homeThreeColumnsItem__header {
+  font-size: 1.8rem;
+  color: $color-border-scrollLink;
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+
+.homeThreeColumnsItem__paragraph {
+  font-size: 1.6rem;
+  color: $color-border-scrollLink;
+  text-align: center;
+}
