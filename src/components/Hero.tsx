@@ -8,7 +8,10 @@ const Hero = () => {
     <div className="hero">
       <Navigation />
       <div className="hero__container">
-        <HeaderTitle />
+        <HeaderTitle
+          text="Zacznij pomagać!"
+          text2=" Oddaj niechciane rzeczy w zaufane ręce"
+        />
         <div className="hero__btns">
           <MainButton text="ODDAJ RZECZY" />
           <MainButton text="ZORGANIZUJ ZBIÓRKĘ" />
