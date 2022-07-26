@@ -1,0 +1,11 @@
+.linkElScroll {
+  .linkElScroll__link {
+    padding: 9px 20px;
+    border: 0.75px solid transparent;
+    font-size: 1.8rem;
+  }
+  .linkElScroll__link:hover {
+    border-color: $color-border-scrollLink;
+    cursor: pointer;
+  }
+}

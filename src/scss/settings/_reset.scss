@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 html,
 body,
 div,
@@ -107,4 +103,8 @@ table {
 input {
   -webkit-appearance: none;
   border-radius: 0;
+}
+
+html {
+  font-size: 62.5%;
 }

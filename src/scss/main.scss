@@ -1,6 +1,11 @@
 @import "./settings/reset";
 @import "./settings/fonts";
 @import "./settings/colors";
+@import "./navigation";
+@import "./linkElRoute";
+@import "./linkElScroll";
+@import "./homeHeader";
+@import "./heroImg";
 body {
   font-family: $font-base;
 }

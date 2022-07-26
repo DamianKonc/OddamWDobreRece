@@ -1,7 +1,14 @@
 import React from "react";
+import Hero from "./Hero";
+import HeroImg from "./HeroImg";
 
 const HomeHeader = () => {
-  return <h1>Home Header</h1>;
+  return (
+    <header className="homeHeader">
+      <HeroImg />
+      <Hero />
+    </header>
+  );
 };
 
 export default HomeHeader;
