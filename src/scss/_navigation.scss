@@ -1,5 +1,12 @@
 .navigation {
+  margin-top: 2rem;
+  margin-right: 15.2rem;
   .navigation__list {
     display: flex;
+    justify-content: right;
+  }
+  .navigation__route {
+    margin-bottom: 3.5rem;
+    margin-right: 2rem;
   }
 }

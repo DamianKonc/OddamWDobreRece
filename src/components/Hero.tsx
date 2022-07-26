@@ -1,12 +1,12 @@
 import React from "react";
 import Navigation from "./Navigation";
+import HeaderTitle from "./HeaderTitle";
 
 const Hero = () => {
   return (
-    <div>
-      <div>
-        <Navigation />
-      </div>
+    <div className="hero">
+      <Navigation />
+      <HeaderTitle />
     </div>
   );
 };
