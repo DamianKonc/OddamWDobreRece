@@ -1,8 +1,7 @@
 import React from "react";
-import "./scss/reset.scss";
 
 function App() {
-  return <div className="App">App</div>;
+  return <div className="App">APP</div>;
 }
 
 export default App;
