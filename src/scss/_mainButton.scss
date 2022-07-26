@@ -1,0 +1,11 @@
+.mainButton {
+  width: 310px;
+  height: 12opx;
+  font-size: 3.6rem;
+  background-color: white;
+  border: 0.75p solid $color-border-scrollLink;
+}
+
+.mainButton:hover {
+  cursor: pointer;
+}

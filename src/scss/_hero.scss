@@ -1,3 +1,13 @@
 .hero {
   width: 50%;
 }
+
+.hero__container {
+  width: fit-content;
+}
+
+.hero__btns {
+  display: flex;
+  gap: 4.4rem;
+  margin-top: 6.5rem;
+}
