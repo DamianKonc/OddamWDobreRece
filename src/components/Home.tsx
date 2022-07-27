@@ -4,15 +4,19 @@ import HomeThreeColumns from "./HomeThreeColumns";
 import SimpleSteps from "./SimpleSteps";
 import AbooutUs from "./AboutUs";
 import Helping from "./Helping";
+import ContactField from "./ContactField";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <HomeHeader />
       <HomeThreeColumns />
       <SimpleSteps />
       <AbooutUs />
       <Helping />
+      <ContactField />
+      <Footer />
     </div>
   );
 };

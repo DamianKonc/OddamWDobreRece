@@ -1,0 +1,66 @@
+.contactField {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("../assets/Background-Contact-Form.jpg");
+  //   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 200px 142px 319px 1230px;
+}
+.contactField__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactField__form {
+  width: 528px;
+  margin-top: 70px;
+}
+.contactField__form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.contactField__form-wrapper-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactField__form-wrapper-input {
+  margin-top: 12px;
+}
+
+.contactField__form-smallLabel {
+  width: 48%;
+}
+
+.contactField__label-text {
+  font-size: 1.6rem;
+}
+
+.contactField__form-wrapper-input {
+  border: none;
+  border-bottom: 0.75px solid black;
+}
+
+.contactField__form-bigInput {
+  resize: none;
+}
+
+.contactField__form-btn {
+  font-size: 1.8rem;
+  padding: 13px 52px;
+  border: 0.75 solid $color-border-scrollLink;
+  background-color: white;
+  margin-top: 44px;
+  margin-left: 70%;
+}

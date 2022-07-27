@@ -1,0 +1,20 @@
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 587px;
+}
+
+.footer__copy {
+  font-size: 1.8rem;
+}
+
+.footer__socials {
+  margin-right: 142px;
+  display: flex;
+  gap: 20px;
+}
