@@ -1,0 +1,36 @@
+.aboutUs {
+  display: flex;
+  background-color: $color-main;
+  margin-bottom: 70px;
+}
+
+.aboutUs__el {
+  padding: 186px 150px;
+  width: 50%;
+}
+
+.aboutUs__el-dscr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutUs__img {
+  background-image: url("../assets/People.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.aboutUs__el-signature {
+  justify-self: right;
+  align-self: flex-end;
+}
+
+.aboutUs__el-text {
+  text-align: center;
+  font-size: 3rem;
+  color: $color-border-scrollLink;
+  margin-top: 55px;
+  margin-bottom: 40px;
+}
