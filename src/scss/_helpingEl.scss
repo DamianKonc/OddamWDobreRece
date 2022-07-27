@@ -1,0 +1,29 @@
+.helpingEl {
+  display: flex;
+  justify-content: space-between;
+  width: 1344px;
+  height: 81px;
+  margin-bottom: 80px;
+}
+
+.helpingEl__name {
+  font-family: $font-alt;
+  font-weight: 300;
+  font-size: 2.6rem;
+  color: $color-border-scrollLink;
+}
+
+.helpingEl__mission {
+  font-family: $font-alt;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: $color-border-scrollLink;
+}
+
+.helpingEl__need {
+  font-family: $font-alt;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: $color-border-scrollLink;
+}
