@@ -1,7 +1,10 @@
 import React from "react";
 import HeaderTitle from "./HeaderTitle";
 import SimpleStepsItem from "./SimpleStepsItem";
-import image from "../assets/Icon-4.svg";
+import shirtImage from "../assets/shirt.svg";
+import bagImage from "../assets/Icon-2.svg";
+import magnifyGlassImage from "../assets/Icon-3.svg";
+import arrowsImage from "../assets/Icon-4.svg";
 import MainButton from "./MainButton";
 
 const SimpleSteps = () => {
@@ -10,25 +13,25 @@ const SimpleSteps = () => {
       <HeaderTitle text="Wystarczą 4 proste kroki" />
       <div className="simplesteps__elements">
         <SimpleStepsItem
-          imageSrc="/static/media/Icon-4.f1b3fb6d88016f0f95543cc7ad9a7803.svg"
+          imageSrc={shirtImage}
           imageAlt="shirt"
           header="Wybierz rzeczy"
           paragraph="ubrania, zabawki, sprzęt i inne"
         />
         <SimpleStepsItem
-          imageSrc="/static/media/Icon-4.f1b3fb6d88016f0f95543cc7ad9a7803.svg"
+          imageSrc={bagImage}
           imageAlt="Bag"
           header="Spakuj je"
           paragraph="skorzystaj z worków na śmieci"
         />
         <SimpleStepsItem
-          imageSrc="/static/media/Icon-4.f1b3fb6d88016f0f95543cc7ad9a7803.svg"
+          imageSrc={magnifyGlassImage}
           imageAlt="Magnify glass"
           header="Zdecyduj komu chcesz pomóc"
           paragraph="wybierz zaufane miejsce"
         />
         <SimpleStepsItem
-          imageSrc={image}
+          imageSrc={arrowsImage}
           imageAlt="await arrows"
           header="Zamów kuriera"
           paragraph="kurier przyjedzie w dogodnym terminie"
