@@ -1,0 +1,26 @@
+.simpleStepsItem {
+  max-width: 134px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.simpleStepsItem__img {
+  width: 83px;
+  height: 83px;
+}
+
+.simpleStepsItem__header {
+  font-size: 1.8rem;
+  color: $color-border-scrollLink;
+}
+
+.simpleStepsItem__line {
+  width: 7rem;
+  border: 1px solid #707070;
+  margin: 10.5px 0;
+}
+
+.simpleStepsItem__text {
+  font-size: 1.6rem;
+}

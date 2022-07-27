@@ -3,13 +3,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 80px;
 }
 
 .simplesteps__elements {
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 158px;
+  background-color: $color-main;
+  padding-top: 71px;
+  padding-bottom: 76px;
+  margin-top: 34px;
+  margin-bottom: 35px;
 }
 
 .simpleStepsItem__img-div {
-  width: 400px;
-  height: 400px;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
 }

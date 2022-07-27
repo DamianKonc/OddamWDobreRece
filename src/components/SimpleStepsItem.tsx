@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 type SimpleStepsItemProps = {
   imageSrc: string;
@@ -15,11 +15,6 @@ const SimpleStepsItem = (props: SimpleStepsItemProps) => {
         src={props.imageSrc}
         alt={props.imageAlt}
       />
-      <div
-        className="simpleStepsItem__img-div"
-        style={{ background: `${props.imageSrc}` }}
-      ></div>
-
       <h4 className="simpleStepsItem__header">{props.header}</h4>
       <div className="simpleStepsItem__line" />
       <p className="simpleStepsItem__text">{props.paragraph}</p>
