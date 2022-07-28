@@ -1,0 +1,15 @@
+.pagination__btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination__btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 13px 15px;
+}
+.pagination__btn:hover {
+  cursor: pointer;
+}

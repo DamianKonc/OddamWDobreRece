@@ -1,53 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HeaderTitle from "./HeaderTitle";
 import HelpingButton from "./HelpingButton";
 import HelpingEl from "./HelpingEl";
-
-const fundacje = [
-  {
-    name: "Dbam o  Zdrowie",
-    mission: "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
-    need: "ubrania, meble, jedzenie, sprzęt AGD",
-  },
-  {
-    name: "Dla dzieci",
-    mission: "Pomoc dzieciom z ubogich rodzin.",
-    need: "ubrania, meble, jedzenie, sprzęt AGD",
-  },
-  {
-    name: "Bez domu",
-    mission:
-      "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
-    need: "ubrania, jedzenie, ciepłe koce",
-  },
-  {
-    name: "Psia kość",
-    mission: "Pomoc schroniskom.",
-    need: "stare kołdry, koce, karma dla psów",
-  },
-  {
-    name: "Kocie życie",
-    mission: "Pomoc bezdomnym kotom.",
-    need: "stare ubrania, kołdry, jedzenie dla kotów",
-  },
-  {
-    name: "Bez domu",
-    mission:
-      "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
-    need: "ubrania, jedzenie, ciepłe koce",
-  },
-  {
-    name: "Dla dzieci",
-    mission: "Pomoc dzieciom z ubogich rodzin.",
-    need: "ubrania, meble, jedzenie, sprzęt AGD",
-  },
-  {
-    name: "Bez domu",
-    mission:
-      "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
-    need: "ubrania, jedzenie, ciepłe koce",
-  },
-];
+import { fundacje, organizacjePozarządowe } from "../app/db";
+import Pagination from "./Pagination";
 
 const Helping = () => {
   return (
@@ -64,14 +20,7 @@ const Helping = () => {
         potrzebują.
       </p>
       <ul>
-        {fundacje.map((el, id) => (
-          <HelpingEl
-            key={id}
-            name={el.name}
-            mission={el.mission}
-            need={el.need}
-          />
-        ))}
+        <Pagination data={organizacjePozarządowe} howManyOnPage={3} />
       </ul>
     </section>
   );
