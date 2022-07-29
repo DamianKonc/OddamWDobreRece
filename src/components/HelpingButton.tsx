@@ -4,8 +4,16 @@ type TextButton = {
   text: string;
 };
 
+const changeFundation = (fund) => () => {
+  // dispatch
+};
+
 const HelpingButton = (props: TextButton) => {
-  return <button className="helpingButton"> {props.text}</button>;
+  return (
+    <button onClick={changeFundation("fundacjom")} className="helpingButton">
+      {props.text}
+    </button>
+  );
 };
 
 export default HelpingButton;

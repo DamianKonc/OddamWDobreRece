@@ -11,8 +11,7 @@ export const fundacje = [
   },
   {
     name: "Bez domu",
-    mission:
-      "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
+    mission: " Pomoc dla osób nie posiadających miejsca zamieszkania.",
     need: "ubrania, jedzenie, ciepłe koce",
   },
   {
@@ -27,19 +26,17 @@ export const fundacje = [
   },
   {
     name: "Bez domu",
-    mission:
-      "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
-    need: "ubrania, jedzenie, ciepłe koce",
+    mission: " Pomoc dla osób nie posiadających miejsca zamieszkania.",
+    need: "ubrania, jedzenie, ciepłe koce, domy, mieszkania",
   },
   {
-    name: "Dla dzieci",
+    name: "Dla dzieci2",
     mission: "Pomoc dzieciom z ubogich rodzin.",
     need: "ubrania, meble, jedzenie, sprzęt AGD",
   },
   {
-    name: "Bez domu",
-    mission:
-      "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
+    name: "Bez pracy",
+    mission: "Pomoc dla osób nie posiadających pracy.",
     need: "ubrania, jedzenie, ciepłe koce",
   },
 ];
@@ -47,11 +44,11 @@ export const fundacje = [
 export const organizacjePozarządowe = [
   {
     name: "Nie dbam o prawo",
-    mission: "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+    mission: "Pomoc osobom z problemami prawnymi.",
     need: "ubrania, meble, jedzenie, sprzęt AGD",
   },
   {
-    name: "Nie dla rodzin",
+    name: "Pomoc prawna Januszex",
     mission: "Pomoc dzieciom z ubogich rodzin.",
     need: "ubrania, meble, jedzenie, sprzęt AGD",
   },
