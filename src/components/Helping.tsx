@@ -48,7 +48,7 @@ const Helping = () => {
   // console.log(databaseIntems)ss;
 
   return (
-    <section className="helping">
+    <section id="fundationsAndOrganisations" className="helping">
       <HeaderTitle text="Komu pomagamy?" />
       <div className="helping__btns">
         <HelpingButton text={"Fundacjom"} />

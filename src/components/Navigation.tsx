@@ -53,11 +53,14 @@ const Navigation = () => {
         </ul>
       )}
       <ul className="navigation__list navigation__scroll">
-        <LinkElScroll text="Start" />
-        <LinkElScroll text="O co chodzi?" />
-        <LinkElScroll text="O nas" />
-        <LinkElScroll text="Fundacja i organizacje" />
-        <LinkElScroll text="Kontakt" />
+        <LinkElScroll link="start" text="Start" />
+        <LinkElScroll link="homeThreeColumns" text="O co chodzi?" />
+        <LinkElScroll link="aboutUs" text="O nas" />
+        <LinkElScroll
+          link="fundationsAndOrganisations"
+          text="Fundacja i organizacje"
+        />
+        <LinkElScroll link="Contact" text="Kontakt" />
       </ul>
     </div>
   );

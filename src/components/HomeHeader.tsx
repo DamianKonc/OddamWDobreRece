@@ -4,7 +4,7 @@ import HeroImg from "./HeroImg";
 
 const HomeHeader = () => {
   return (
-    <header className="homeHeader">
+    <header id="start" className="homeHeader">
       <HeroImg />
       <Hero />
     </header>

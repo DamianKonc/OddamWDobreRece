@@ -83,7 +83,7 @@ const CreateApp = () => {
           </label>
         </form>
         <div className="login-register__btns">
-          <Link className="login-register__btns__createACC" to={"./createacc"}>
+          <Link className="login-register__btns__createACC" to={"/login"}>
             Zaloguj się
           </Link>
           <button onClick={createUser} className="login-register__btns__Login">

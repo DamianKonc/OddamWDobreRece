@@ -4,7 +4,7 @@ import HeaderTitle from "./HeaderTitle";
 
 const ContactField = () => {
   return (
-    <section className="contactField">
+    <section id="Contact" className="contactField">
       <div className="contactField__wrapper">
         <HeaderTitle text="Skontaktuj się z nami" />
         <form className="contactField__form">

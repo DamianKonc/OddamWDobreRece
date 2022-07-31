@@ -3,7 +3,7 @@ import HomeThreeColumnsItem from "./HomeThreeColumnsItem";
 
 const HomeThreeColumns = () => {
   return (
-    <section className="homeThreeColumns">
+    <section id="homeThreeColumns" className="homeThreeColumns">
       <HomeThreeColumnsItem
         howMuch={10}
         toWhat={"ODDANYCH WORKÓW"}
