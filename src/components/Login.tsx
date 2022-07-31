@@ -65,9 +65,13 @@ const Login = () => {
           <Link className="login-register__btns__createACC" to={"./createacc"}>
             Załóż konto{" "}
           </Link>
-          <button onClick={logInUser} className="login-register__btns__Login">
+          <Link
+            onClick={logInUser}
+            className="login-register__btns__Login"
+            to="/"
+          >
             Zaloguj się
-          </button>
+          </Link>
         </div>
       </div>
     </div>

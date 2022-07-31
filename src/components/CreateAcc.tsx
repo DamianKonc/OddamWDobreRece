@@ -35,6 +35,9 @@ const CreateApp = () => {
       .then((userCredential) => {
         setError("");
         setMessage("Udało Ci się utworzyć konto");
+        setLogin("");
+        setPassword("");
+        setRepeatPassword("");
       })
       .catch((error) => {
         const errorCode = error.code;
