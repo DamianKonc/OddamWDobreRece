@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import CreateAcc from "./components/CreateAcc";
+import LogOut from "./components/LogOut";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/createacc" element={<CreateAcc />} />
+        <Route path="/logout" element={<LogOut />} />
       </Routes>
     </BrowserRouter>
   );
