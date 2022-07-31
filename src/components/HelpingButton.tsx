@@ -1,17 +1,18 @@
 import React from "react";
 
-type TextButton = {
+interface ButtonProps {
   text: string;
-};
+  changeOrganizations: (params: any) => any;
+}
 
-const changeFundation = (fund) => () => {
-  // dispatch
-};
-
-const HelpingButton = (props: TextButton) => {
+const HelpingButton = ({ text, changeOrganizations }: ButtonProps) => {
   return (
-    <button onClick={changeFundation("fundacjom")} className="helpingButton">
-      {props.text}
+    <button
+      value={text}
+      onClick={changeOrganizations}
+      className="helpingButton"
+    >
+      {text}
     </button>
   );
 };

@@ -18,7 +18,6 @@ const Navigation = () => {
         setLoggedMail(user.email);
       } else {
         setIsLogged(false);
-        console.log("dupa");
       }
     });
   }, [isLogged]);
@@ -27,11 +26,8 @@ const Navigation = () => {
     signOut(auth)
       .then(() => {
         setIsLogged(false);
-        console.log("signetOut");
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => {});
   };
 
   return (

@@ -10,8 +10,6 @@ const MainButton = (props: input) => {
   const auth = getAuth();
   const user = auth.currentUser;
 
-  console.log(user?.email);
-
   if (user) {
     return (
       <Link to={"/login"} className="mainButton">

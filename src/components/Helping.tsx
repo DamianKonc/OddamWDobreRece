@@ -16,50 +16,82 @@ const Helping = () => {
     ID: number;
   }
 
-  const [databaseIntems, setDatabaseItems] = useState<Items[]>([] as Items[]);
   const itemsss = useSelector((state: RootState) => state.datas);
   const dispatch = useDispatch();
 
-  const nonGovernmentalOrganizations = " nonGovernmentalOrganizations";
-  const localCollection = " localCollection";
-  const fundations = "Fundations";
+  const [helpingTo, setHelpingTo] = useState("Fundations");
+  const [messageText, setMessageText] = useState(
+    " W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują."
+  );
 
   const downloading = async () => {
-    // setDatabaseItems([]);
-    const querySnapshot = await getDocs(collection(db, localCollection));
+    const querySnapshot = await getDocs(collection(db, helpingTo));
     const result: Items[] = [];
     querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
-
       const items: Items = doc.data() as Items;
 
       result.push(items);
-      // setDatabaseItems((prev) => [...prev, doc.data() as Items]);
     });
     dispatch(fetchData(result));
   };
 
-  console.log(itemsss.dataFromDB);
+  const pickMessage = () => {
+    switch (helpingTo) {
+      case "Fundations":
+        setMessageText(
+          "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują."
+        );
+        break;
+      case " nonGovernmentalOrganizations":
+        setMessageText(
+          "Zweryfikowane, najlepsze Organizacje pozarządowe sprawdzone przez nas. Nigdy nikt nie był w tak pewny w proponowaniu organizacji jak my."
+        );
+        break;
+      case " localCollection":
+        setMessageText(
+          "Znajdź najlepszą zbiórkę dla siebie. Możesz śmiało kontaktować się z organizatorami, są w Twojej okolicy. Możemy ich polecić z głębi serca, a serca mamy wielkie!!"
+        );
+        break;
+    }
+  };
 
   useEffect(() => {
     downloading();
-  }, []);
+    pickMessage();
+  }, [helpingTo]);
 
-  // console.log(databaseIntems)ss;
+  const changeOrganizationsss = (e) => {
+    switch (e.currentTarget.value) {
+      case "Fundacjom":
+        setHelpingTo("Fundations");
+        break;
+      case "Organizajom pozarządowym":
+        setHelpingTo(" nonGovernmentalOrganizations");
+        break;
+      case "Lokalnym zbiórkom":
+        setHelpingTo(" localCollection");
+        break;
+    }
+  };
 
   return (
     <section id="fundationsAndOrganisations" className="helping">
       <HeaderTitle text="Komu pomagamy?" />
       <div className="helping__btns">
-        <HelpingButton text={"Fundacjom"} />
-        <HelpingButton text={"Organizajom pozarządowym"} />
-        <HelpingButton text={"Lokalnym zbiórkom"} />
+        <HelpingButton
+          changeOrganizations={changeOrganizationsss}
+          text={"Fundacjom"}
+        />
+        <HelpingButton
+          changeOrganizations={changeOrganizationsss}
+          text={"Organizajom pozarządowym"}
+        />
+        <HelpingButton
+          changeOrganizations={changeOrganizationsss}
+          text={"Lokalnym zbiórkom"}
+        />
       </div>
-      <p className="helpin__text">
-        W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi
-        współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego
-        potrzebują.
-      </p>
+      <p className="helpin__text">{messageText}</p>
       <ul>
         <Pagination data={itemsss.dataFromDB} howManyOnPage={3} />
       </ul>

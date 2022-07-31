@@ -15,14 +15,7 @@ export interface DatasState {
 }
 
 const initialState: DatasState = {
-  dataFromDB: [
-    // {
-    //   name: "Dbam o  Zdrowie",
-    //   mission: "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
-    //   need: "ubrania, meble, jedzenie, sprzęt AGD",sss
-    //   ID: 2,
-    // },
-  ],
+  dataFromDB: [],
 };
 
 if (initialState.dataFromDB.length === 0) {
@@ -36,11 +29,6 @@ export const datasSlicer = createSlice({
     fetchData: (state, action: PayloadAction<Data[]>) => {
       state.dataFromDB = action.payload;
     },
-    // change: fund => dispatch => {
-    //   //zapytanie o zmianę itemów z fundacji
-    //   //then
-    //   dispatch(fetchData())
-    // } curring
   },
 });
 
