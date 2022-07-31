@@ -1,0 +1,67 @@
+.login-register {
+  position: relative;
+  margin-top: 0;
+  height: 95vh;
+}
+
+.login-register__wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-register__form {
+  background-color: $color-main;
+  padding: 40px 67.2px;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  margin-top: 60px;
+}
+
+.login-register__form-label {
+  font-size: 1.6rem;
+  font-weight: "Semibold";
+}
+
+.login-register__form-input {
+  border: none;
+  border-bottom: 0.75px solid $color-fourth;
+  background-color: transparent;
+}
+
+.login-register__btns {
+  display: flex;
+  gap: 280px;
+  margin-top: 53px;
+  align-items: center;
+}
+
+.login-register__btns__createACC {
+  color: $color-border-scrollLink;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 13px 15px;
+  border: 0.75px solid transparent;
+}
+
+.login-register__btns__createACC:hover {
+  cursor: pointer;
+  border-color: $color-border-menu;
+}
+
+.login-register__btns__Login {
+  font-size: 1.8rem;
+  background-color: white;
+  padding: 13px 15px;
+  border: 0.75px solid $color-border-scrollLink;
+}
+
+.login-register__btns__Login {
+  cursor: pointer;
+}

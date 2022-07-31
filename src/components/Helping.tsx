@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import HeaderTitle from "./HeaderTitle";
 import HelpingButton from "./HelpingButton";
-import HelpingEl from "./HelpingEl";
-import { fundacje, organizacjePozarządowe } from "../app/db";
 import Pagination from "./Pagination";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../app/firebaceConfig";

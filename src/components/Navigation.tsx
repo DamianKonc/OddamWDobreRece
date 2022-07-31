@@ -6,8 +6,8 @@ const Navigation = () => {
   return (
     <div className="navigation">
       <ul className="navigation__list navigation__route">
-        <LinkElRoute text="Zaloguj" link="/" />
-        <LinkElRoute text="Załóż konto" link="/" />
+        <LinkElRoute text="Zaloguj" link="/login" />
+        <LinkElRoute text="Załóż konto" link="/createacc" />
       </ul>
       <ul className="navigation__list navigation__scroll">
         <LinkElScroll text="Start" />
