@@ -9,7 +9,13 @@ type LinkProps = {
 const LinkElScroll = (props: LinkProps) => {
   return (
     <li className="linkElScroll">
-      <Link to={props.link} smooth={true} className="linkElScroll__link">
+      <Link
+        activeClass="active"
+        to={`${props.link}`}
+        spy={true}
+        smooth={true}
+        className="linkElScroll__link"
+      >
         {props.text}
       </Link>
     </li>

@@ -1,9 +1,15 @@
 .mainButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: black;
   width: 310px;
   height: 120px;
   font-size: 3.6rem;
   background-color: white;
-  border: 0.75p solid $color-border-scrollLink;
+  border: 1px solid black;
 }
 
 .mainButton:hover {

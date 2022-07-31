@@ -41,7 +41,7 @@ const Navigation = () => {
           <li className="navigation__greeting">Cześć {loggedMail} </li>
           <LinkElRoute text="Oddaj rzeczy" link="/" />
           <li className="linkElRoute">
-            <Link className="linkElRoute__link" onClick={logout} to="/">
+            <Link className="linkElRoute__link" onClick={logout} to="/logout">
               Wyloguj
             </Link>
           </li>

@@ -62,16 +62,12 @@ const Login = () => {
           </label>
         </form>
         <div className="login-register__btns">
-          <Link className="login-register__btns__createACC" to={"./createacc"}>
+          <Link className="login-register__btns__createACC" to={"/createacc"}>
             Załóż konto{" "}
           </Link>
-          <Link
-            onClick={logInUser}
-            className="login-register__btns__Login"
-            to="/"
-          >
+          <button onClick={logInUser} className="login-register__btns__Login">
             Zaloguj się
-          </Link>
+          </button>
         </div>
       </div>
     </div>

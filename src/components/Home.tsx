@@ -9,7 +9,7 @@ import Footer from "./Footer";
 
 const Home = () => {
   return (
-    <div style={{ position: "relative" }}>
+    <div id="home" style={{ position: "relative" }}>
       <HomeHeader />
       <HomeThreeColumns />
       <SimpleSteps />
