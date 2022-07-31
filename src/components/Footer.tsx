@@ -8,12 +8,12 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__copy">Copyright Coders Lab</div>
       <div className="footer__socials">
-        <Link to={"https://www.facebook.com/"}>
+        <a href="https://www.facebook.com/">
           <img src={facebookIcon} />
-        </Link>
-        <Link to={"https://www.instagram.com/"}>
+        </a>
+        <a href="https://www.instagram.com/">
           <img src={instagramIcon} />
-        </Link>
+        </a>
       </div>
     </footer>
   );
