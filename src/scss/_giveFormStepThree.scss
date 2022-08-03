@@ -1,0 +1,70 @@
+.giveBackFormWrapper-three {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.giveBackForm__selectContainer-select-options-container-three {
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+  //   gap: 2px;
+}
+
+.giveBackForm__selectContainer-select-title-three {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.giveBackForm__selectContainer-select-option-three {
+  z-index: 2;
+  background-color: #e8e9e4;
+  width: 300px;
+  text-align: left;
+  padding-left: 18px;
+  line-height: 26px;
+}
+
+.giveBackForm__choose {
+  margin-top: 50px;
+}
+
+.giveBackForm__choose-title-three {
+  margin-bottom: 20px;
+}
+
+.giveBackForm__choose-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 66%;
+}
+.giveBackForm__choose-wrapper-el {
+  font-size: 2.4rem;
+  padding: 11px 26px;
+  border: 0.75px solid $color-border-scrollLink;
+  position: relative;
+  z-index: 1;
+}
+.giveBackForm__choose-wrapper-el-input {
+  position: absolute;
+  top: -3px;
+  left: -5px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+input:checked {
+  background-color: #fad648;
+}
+
+.giveBackForm__choose-title-three-input {
+  width: 570px;
+  height: 40px;
+  font-size: 2.2rem;
+  background-color: transparent;
+  margin-bottom: 120px;
+  border: 0.75px solid $color-border-scrollLink;
+}

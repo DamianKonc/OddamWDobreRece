@@ -1,0 +1,34 @@
+.giveBackFrom__form-steps {
+  font-size: 2.4rem;
+  font-weight: lighter;
+}
+
+.giveBackFrom__form-header-stepOne {
+  margin-bottom: 40px;
+}
+
+.giveBackFrom__form-labels {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.giveBackFrom__form-labels-el {
+  font-size: 2.4rem;
+}
+.giveBackFrom__form-labels-el-input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+
+.giveBackFrom__form-labels-el-input:checked {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  background-color: #fad648;
+}
+
+.giveBackFormWrapper__btn-stepOne {
+  margin-top: 158px;
+}

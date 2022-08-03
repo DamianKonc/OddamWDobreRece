@@ -1,0 +1,34 @@
+.giveBackForm__fourth-forms {
+  display: flex;
+  margin-bottom: 215px;
+}
+
+.giveBackForm__fourth-forms-adresForm {
+  margin-right: 152px;
+}
+
+.giveBackForm__fourth-forms-adresForm-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.giveBackForm__fourth-forms-adresForm-label-text {
+  font-size: 2.4rem;
+  font-weight: lighter;
+  max-width: 120px;
+}
+
+.giveBackForm__fourth-forms-adresForm-label-text-input {
+  border: 0.75px solid $color-border-scrollLink;
+  background-color: transparent;
+  font-size: 2.4rem;
+  width: 256px;
+}
+
+.giveBackForm__fourth-forms-adresForm-label-text-textarea {
+  background-color: transparent;
+  font-size: 2.4rem;
+  resize: none;
+  width: 256px;
+}

@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import CreateAcc from "./components/CreateAcc";
 import LogOut from "./components/LogOut";
+import GiveBackForm from "./components/GiveBackForm";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/createacc" element={<CreateAcc />} />
         <Route path="/logout" element={<LogOut />} />
+        <Route path="/giveform" element={<GiveBackForm />} />
       </Routes>
     </BrowserRouter>
   );

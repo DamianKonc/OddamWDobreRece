@@ -1,0 +1,98 @@
+.giveBackForm {
+  position: relative;
+}
+
+.giveBackForm__hero {
+  height: 100vh;
+  position: relative;
+}
+
+.giveBackForm__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: transparent url("../assets/Form-Hero-Image.jpg");
+  background-position: 50%;
+  background-size: cover;
+}
+
+.giveBackForm__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min-content;
+  margin-left: 50%;
+}
+.giveBackForm__header-wrapper {
+  width: 652px;
+}
+
+.giveBackForm__semititle {
+  font-size: 4rem;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.giveBackForm__steps {
+  display: flex;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.giveBackFrom__steps-step {
+  width: 134px;
+  height: 134px;
+
+  border: 0.75px solid $color-border-scrollLink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+}
+
+.giveBackFrom__steps-step-inside {
+  transform: rotate(-45deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.giveBackFrom__steps-step-number {
+  font-size: 3.2rem;
+  font-weight: lighter;
+}
+
+.giveBackFrom__steps-step-text {
+  font-size: 2.2rem;
+  font-weight: lighter;
+  text-align: center;
+  max-width: 100px;
+}
+
+.giveBackFrom__important {
+  padding: 50px 0 50px 141px;
+  background-color: #fad648;
+}
+
+.giveBackFrom__important-header {
+  font-size: 3.6rem;
+}
+
+.giveBackFrom__important-text {
+  font-size: 2.2rem;
+}
+
+.giveBackFrom__form {
+  background: transparent url("../assets/Background-Form.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 883px;
+}

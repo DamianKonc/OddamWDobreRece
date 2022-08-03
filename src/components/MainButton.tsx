@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 type input = {
   text: string;
@@ -12,7 +12,7 @@ const MainButton = (props: input) => {
 
   if (user) {
     return (
-      <Link to={"/login"} className="mainButton">
+      <Link to={"/giveform"} className="mainButton">
         {props.text}
       </Link>
     );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 type LinkProps = {
   text: string;
@@ -9,15 +9,9 @@ type LinkProps = {
 const LinkElScroll = (props: LinkProps) => {
   return (
     <li className="linkElScroll">
-      <Link
-        activeClass="active"
-        to={`${props.link}`}
-        spy={true}
-        smooth={true}
-        className="linkElScroll__link"
-      >
+      <NavLink to={`/#${props.link}`} className="linkElScroll__link">
         {props.text}
-      </Link>
+      </NavLink>
     </li>
   );
 };

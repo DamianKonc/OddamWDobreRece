@@ -23,6 +23,12 @@
 @import "./loginRegister";
 @import "./logout";
 @import "./settings/general";
+@import "./giveBackForm";
+@import "./giveFormStepOne";
+@import "./giveFormStepTwo";
+@import "./giveFormStepThree";
+@import "./giveBackFormStepFourth";
+@import "./giveFormStepFifth";
 body {
   font-family: $font-base;
 }

@@ -13,7 +13,6 @@ const Navigation = () => {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(user.uid);
         setIsLogged(true);
         setLoggedMail(user.email);
       } else {
@@ -35,7 +34,7 @@ const Navigation = () => {
       {isLogged ? (
         <ul className="navigation__list navigation__route">
           <li className="navigation__greeting">Cześć {loggedMail} </li>
-          <LinkElRoute text="Oddaj rzeczy" link="/" />
+          <LinkElRoute text="Oddaj rzeczy" link="/giveform" />
           <li className="linkElRoute">
             <Link className="linkElRoute__link" onClick={logout} to="/logout">
               Wyloguj

@@ -11,3 +11,88 @@
   font-size: 2rem;
   border: 0.75 solid green;
 }
+
+.giveBackFormWrapper {
+  margin-left: 142px;
+}
+
+.giveBackFrom__form-header {
+  font-size: 3.6rem;
+  font-weight: bolder;
+  margin-top: 70px;
+}
+
+.giveBackFormWrapper__btn {
+  font-size: 2.4rem;
+  font-weight: lighter;
+  padding: 23px 63px;
+  background-color: transparent;
+  border: 0.75px solid #3c3c3c;
+}
+
+.giveBackForm__selectContainer {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-top: 50px;
+}
+
+.giveBackForm__selectContainer-text {
+  font-size: 2.4rem;
+}
+
+.giveBackForm__selectContainer-select {
+  background-color: transparent;
+  font-size: 2.4rem;
+  font-weight: lighter;
+  position: relative;
+}
+
+.giveBackForm__selectContainer-select-title {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 18px;
+  border: 0.75px solid $color-border-scrollLink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.giveBackForm__selectContainer-select-options-container {
+  position: absolute;
+  border: 0.75px solid $color-border-scrollLink;
+  text-align: center;
+  right: 0;
+  margin-top: 15px;
+}
+
+.giveBackForm__selectContainer-select-option {
+  background-color: transparent;
+  padding: 6px 36px;
+}
+
+.giveBackForm__choose-title {
+  font-size: 2.4rem;
+  font-weight: bolder;
+}
+
+.mt-46 {
+  margin-top: 46px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-38 {
+  margin-bottom: 38px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
