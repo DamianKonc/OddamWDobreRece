@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import arrowUp from "../assets/Icon-Arrow-Up.svg";
 import arrowDown from "../assets/Icon-Arrow-Down.svg";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { change } from "../app/chariitySlicer";
+import { RootState } from "../app/store";
 
 const GiveFormStepTwo = (ChangeStepsProps: {
   increase: Function;
   decrease: Function;
 }) => {
-  const [bagsQuantityState, setBagsQuantityState] = useState(" -- wybierz --");
+  const bags = useSelector((state: RootState) => state.yourCharity.howManyBags);
+  const [bagsQuantityState, setBagsQuantityState] = useState(bags);
   const [active, setActive] = useState(false);
   const dispatch = useDispatch();
 
   const settingActive = () => {
     setActive((prev) => !prev);
-    console.log(active);
   };
 
   const goBack = () => {
@@ -21,14 +23,11 @@ const GiveFormStepTwo = (ChangeStepsProps: {
   };
 
   const addItems = () => {
-    if (typeof bagsQuantityState === "number") {
-    }
-
     ChangeStepsProps.increase();
+    dispatch(change({ key: "howManyBags", value: bagsQuantityState }));
   };
 
   const handleBagsQuantity = (e: any) => {
-    console.log(e.target.id);
     setBagsQuantityState(e.target.id);
     setActive(false);
   };

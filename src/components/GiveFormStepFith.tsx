@@ -29,9 +29,9 @@ const GiveFormStepFifth = (ChangeStepsProps: {
           <img className="giveFormStepFifth__charity-img" src={shirt} />
           <p className="giveFormStepFifth__charity-text">
             <span>
-              <FetchingData name="stuff" /> worki,
+              <FetchingData name="howManyBags" /> worki,
               <FetchingData name="stuff" />,
-              <FetchingData name="yourCity" />
+              <FetchingData name="whoToHelp" />
             </span>
           </p>
         </div>
@@ -39,7 +39,9 @@ const GiveFormStepFifth = (ChangeStepsProps: {
         <div className="giveFormStepFifth__charity ">
           <img className="giveFormStepFifth__charity-img" src={arrows} />
           <p className="giveFormStepFifth__charity-text">
-            <span>dla lokalizacji: Warszawa</span>
+            <span>
+              dla lokalizacji: <FetchingData name="localisation" />
+            </span>
           </p>
         </div>
       </div>
@@ -53,23 +55,31 @@ const GiveFormStepFifth = (ChangeStepsProps: {
             <div className="divTableBody">
               <div className="divTableRow ">
                 <div className="divTableCell  divTableCell__smaller">Ulica</div>
-                <div className="divTableCell">Prosta 51</div>
+                <div className="divTableCell">
+                  <FetchingData name="street" />
+                </div>
               </div>
               <div className="divTableRow">
                 <div className="divTableCell divTableCell__smaller">Miasto</div>
-                <div className="divTableCell">Warszawa</div>
+                <div className="divTableCell">
+                  <FetchingData name="yourCity" />
+                </div>
               </div>
               <div className="divTableRow">
                 <div className="divTableCell divTableCell__smaller">
                   Kod pocztowy
                 </div>
-                <div className="divTableCell">66-666</div>
+                <div className="divTableCell">
+                  <FetchingData name="zipCode" />
+                </div>
               </div>
               <div className="divTableRow">
                 <div className="divTableCell divTableCell__smaller">
                   Numer telefonu
                 </div>
-                <div className="divTableCell">666 666 666</div>
+                <div className="divTableCell">
+                  <FetchingData name="phoneNumber" />
+                </div>
               </div>
             </div>
           </div>
@@ -82,19 +92,26 @@ const GiveFormStepFifth = (ChangeStepsProps: {
             <div className="divTableBody">
               <div className="divTableRow">
                 <div className="divTableCell divTableCell__smaller">Data</div>
-                <div className="divTableCell">17.10.2022</div>
+                <div className="divTableCell">
+                  <FetchingData name="pickingData" />
+                </div>
               </div>
               <div className="divTableRow">
                 <div className="divTableCell divTableCell__smaller">
                   Godzina
                 </div>
-                <div className="divTableCell">17:30</div>
+                <div className="divTableCell">
+                  <FetchingData name="pickingHour" />
+                </div>
               </div>
               <div className="divTableRow">
                 <div className="divTableCell divTableCell__smaller">
                   Uwagi dla kuriera
                 </div>
-                <div className="divTableCell"></div>
+                <div className="divTableCell">
+                  {" "}
+                  <FetchingData name="notesForTheCourier" />
+                </div>
               </div>
             </div>
           </div>

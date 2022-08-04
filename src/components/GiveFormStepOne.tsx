@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../app/store";
 import { change } from "../app/chariitySlicer";
-import { FetchingData } from "./FetchingData";
 
 const GiveFormStepOne = (IncreaseProps) => {
   const stuff = useSelector((state: RootState) => state.yourCharity.stuff);
   const dispatch = useDispatch();
-  const [items, setItems] = useState("");
+  const [items, setItems] = useState(stuff);
 
   const pickingItems = (e: any) => {
     setItems(e.target.value);

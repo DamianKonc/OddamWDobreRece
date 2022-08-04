@@ -7,7 +7,7 @@ interface YourCharity {
   yourCity: string;
   whoToHelp: string;
   stuff: string;
-  howManyBags: number;
+  howManyBags: number | string;
   localisation: string;
   street: string;
   zipCode: string;
@@ -19,11 +19,11 @@ interface YourCharity {
 }
 
 const initialState: YourCharity = {
-  yourCity: "Brwinów",
-  whoToHelp: "",
-  stuff: "xyz",
-  howManyBags: 0,
-  localisation: "",
+  yourCity: "",
+  whoToHelp: "helping",
+  stuff: "",
+  howManyBags: "--- wybierz ---",
+  localisation: "--- wybierz ---",
   street: "",
   zipCode: "",
   phoneNumber: "",
@@ -39,7 +39,6 @@ export const YourCharitySlicer = createSlice({
   reducers: {
     change: (state, action: PayloadAction<{ key: string; value: any }>) => {
       state[action.payload.key] = [action.payload.value];
-      console.log("gowno");
     },
   },
 });

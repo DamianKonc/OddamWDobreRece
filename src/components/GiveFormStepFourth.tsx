@@ -1,19 +1,44 @@
 import React, { useState } from "react";
 import arrowUp from "../assets/Icon-Arrow-Up.svg";
 import arrowDown from "../assets/Icon-Arrow-Down.svg";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../app/store";
+import { change } from "../app/chariitySlicer";
 
 const GiveFormStepFourth = (ChangeStepsProps: {
   increase: Function;
   decrease: Function;
 }) => {
-  const [myStreet, setMystreet] = useState("");
-  const [myCity, setMyCity] = useState("");
-  const [myZipCode, setMyZipCode] = useState("");
-  const [myPhoneNumber, setMyPhoneNumber] = useState("");
-  const [collectionData, setCollectionData] = useState("");
-  const [collectionHour, setCollectionHour] = useState("");
-  const [collectionCourierInfo, setCollectionCourierInfo] = useState("");
+  const yourCity = useSelector(
+    (state: RootState) => state.yourCharity.yourCity
+  );
+  const yourStreet = useSelector(
+    (state: RootState) => state.yourCharity.street
+  );
+  const yourZipCode = useSelector(
+    (state: RootState) => state.yourCharity.zipCode
+  );
+  const yourPhoneNumber = useSelector(
+    (state: RootState) => state.yourCharity.phoneNumber
+  );
+  const dateOfReceipt = useSelector(
+    (state: RootState) => state.yourCharity.pickingData
+  );
+  const hourOfReceipt = useSelector(
+    (state: RootState) => state.yourCharity.pickingHour
+  );
+  const notesForCourier = useSelector(
+    (state: RootState) => state.yourCharity.notesForTheCourier
+  );
+
+  const [myStreet, setMystreet] = useState(yourStreet);
+  const [myCity, setMyCity] = useState(yourCity);
+  const [myZipCode, setMyZipCode] = useState(yourZipCode);
+  const [myPhoneNumber, setMyPhoneNumber] = useState(yourPhoneNumber);
+  const [collectionData, setCollectionData] = useState(dateOfReceipt);
+  const [collectionHour, setCollectionHour] = useState(hourOfReceipt);
+  const [collectionCourierInfo, setCollectionCourierInfo] =
+    useState(notesForCourier);
 
   const dispatch = useDispatch();
 
@@ -23,6 +48,15 @@ const GiveFormStepFourth = (ChangeStepsProps: {
 
   const addItems = () => {
     ChangeStepsProps.increase();
+    dispatch(change({ key: "street", value: myStreet }));
+    dispatch(change({ key: "yourCity", value: myCity }));
+    dispatch(change({ key: "zipCode", value: myZipCode }));
+    dispatch(change({ key: "phoneNumber", value: myPhoneNumber }));
+    dispatch(change({ key: "pickingData", value: collectionData }));
+    dispatch(change({ key: "pickingHour", value: collectionHour }));
+    dispatch(
+      change({ key: "notesForTheCourier", value: collectionCourierInfo })
+    );
   };
 
   const settingStreet = (e: any) => {

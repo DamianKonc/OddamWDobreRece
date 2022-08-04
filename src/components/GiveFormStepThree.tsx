@@ -1,22 +1,34 @@
 import React, { useEffect, useState } from "react";
 import arrowUp from "../assets/Icon-Arrow-Up.svg";
 import arrowDown from "../assets/Icon-Arrow-Down.svg";
-import { useDispatch } from "react-redux";
-// import { localisationHelpToNameOfOrganization } from "../app/chariitySlicer";
+import { useDispatch, useSelector } from "react-redux";
+import { change } from "../app/chariitySlicer";
+import { RootState } from "../app/store";
 
 const GiveFormStepTwo = (ChangeStepsProps: {
   increase: Function;
   decrease: Function;
 }) => {
-  const [city, setCity] = useState(" -- wybierz --");
+  const localisation = useSelector(
+    (state: RootState) => state.yourCharity.localisation
+  );
+  const helpingTo = useSelector(
+    (state: RootState) => state.yourCharity.whoToHelp
+  );
+  const organization = useSelector(
+    (state: RootState) => state.yourCharity.organizationName
+  );
+
+  const [city, setCity] = useState(localisation);
   const [active, setActive] = useState(false);
-  const [helpTo, setHelpTo] = useState("");
-  const [organizationName, setOrganizationName] = useState("");
+  const [helpTo, setHelpTo] = useState(helpingTo);
+  const [organizationName, setOrganizationName] = useState(organization);
   const dispatch = useDispatch();
+
+  useEffect(() => {}, [helpTo]);
 
   const settingActive = () => {
     setActive((prev) => (prev = !prev));
-    console.log(active);
   };
 
   const goBack = () => {
@@ -25,6 +37,9 @@ const GiveFormStepTwo = (ChangeStepsProps: {
 
   const addItems = () => {
     ChangeStepsProps.increase();
+    dispatch(change({ key: "localisation", value: city }));
+    dispatch(change({ key: "whoToHelp", value: helpTo }));
+    dispatch(change({ key: "organizationName", value: organizationName }));
   };
 
   const cityHandler = (e: any) => {
@@ -33,7 +48,7 @@ const GiveFormStepTwo = (ChangeStepsProps: {
   };
 
   const helpingHandler = (e: any) => {
-    setHelpTo(e.target.id);
+    setHelpTo(e.target.value);
   };
 
   const organizationNameHandler = (e: any) => {
@@ -98,12 +113,11 @@ const GiveFormStepTwo = (ChangeStepsProps: {
           <p className="giveBackForm__choose-title giveBackForm__choose-title-three">
             Komu chcesz pomóc?
           </p>
-          <div className="giveBackForm__choose-wrapper">
-            <label
-              id="dzieciom"
-              onClick={helpingHandler}
-              className="giveBackForm__choose-wrapper-el"
-            >
+          <form
+            onChange={helpingHandler}
+            className="giveBackForm__choose-wrapper"
+          >
+            <label id="dzieciom" className="giveBackForm__choose-wrapper-el">
               dzieciom
               <input
                 className="giveBackForm__choose-wrapper-el-input"
@@ -114,7 +128,6 @@ const GiveFormStepTwo = (ChangeStepsProps: {
             </label>
             <label
               id="samotnym matkom"
-              onClick={helpingHandler}
               className="giveBackForm__choose-wrapper-el"
             >
               samotnym matkom
@@ -125,11 +138,7 @@ const GiveFormStepTwo = (ChangeStepsProps: {
                 value="samotnym matkom"
               />
             </label>
-            <label
-              id="bezdomnym"
-              onClick={helpingHandler}
-              className="giveBackForm__choose-wrapper-el"
-            >
+            <label id="bezdomnym" className="giveBackForm__choose-wrapper-el">
               bezdomnym
               <input
                 className="giveBackForm__choose-wrapper-el-input"
@@ -140,7 +149,6 @@ const GiveFormStepTwo = (ChangeStepsProps: {
             </label>
             <label
               id="niepełnosprawnym"
-              onClick={helpingHandler}
               className="giveBackForm__choose-wrapper-el"
             >
               niepełnosprawnym
@@ -153,7 +161,6 @@ const GiveFormStepTwo = (ChangeStepsProps: {
             </label>
             <label
               id="osobom starszym"
-              onClick={helpingHandler}
               className="giveBackForm__choose-wrapper-el"
             >
               osobom starszym
@@ -164,7 +171,7 @@ const GiveFormStepTwo = (ChangeStepsProps: {
                 value="osobom starszym"
               />
             </label>
-          </div>
+          </form>
         </div>
         <label>
           <p className="giveBackForm__choose-title giveBackForm__choose-title-three mt-46 mb-20">

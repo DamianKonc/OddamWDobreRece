@@ -107,15 +107,5 @@ const GiveBackForm = () => {
       return <div>Something wrong</div>;
   }
 };
-//   return (
-//     <div className="giveBackForm">
-//       <section className="giveBackFrom__form">
-//         <GiveFormStepOne />
-//       </section>
-//       <ContactField />
-//       <Footer />
-//     </div>
-//   );
-// };
 
 export default GiveBackForm;
