@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { stuffPicking } from "../app/chariitySlicer";
 import { RootState } from "../app/store";
+import { change } from "../app/chariitySlicer";
+import { FetchingData } from "./FetchingData";
 
 const GiveFormStepOne = (IncreaseProps) => {
   const stuff = useSelector((state: RootState) => state.yourCharity.stuff);
   const dispatch = useDispatch();
-  const [items, setItems] = useState(stuff);
+  const [items, setItems] = useState("");
 
   const pickingItems = (e: any) => {
     setItems(e.target.value);
   };
 
   const addStuff = () => {
-    dispatch(stuffPicking(items));
     IncreaseProps.increase();
+    dispatch(change({ key: "stuff", value: items }));
   };
 
   return (
     <div className="giveBackFormWrapper">
       <p className="giveBackFrom__form-steps">Step 1/4</p>
-
       <div>
         <div className="giveBackFrom__form-header giveBackFrom__form-header-stepOne">
           Zaznacz co chcesz oddać:

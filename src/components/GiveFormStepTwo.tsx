@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import arrowUp from "../assets/Icon-Arrow-Up.svg";
 import arrowDown from "../assets/Icon-Arrow-Down.svg";
 import { useDispatch } from "react-redux";
-import { bagsQuantity } from "../app/chariitySlicer";
 
 const GiveFormStepTwo = (ChangeStepsProps: {
   increase: Function;
@@ -23,7 +22,6 @@ const GiveFormStepTwo = (ChangeStepsProps: {
 
   const addItems = () => {
     if (typeof bagsQuantityState === "number") {
-      dispatch(bagsQuantity(bagsQuantityState));
     }
 
     ChangeStepsProps.increase();

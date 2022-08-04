@@ -3,11 +3,6 @@ import arrowUp from "../assets/Icon-Arrow-Up.svg";
 import arrowDown from "../assets/Icon-Arrow-Down.svg";
 import { useDispatch } from "react-redux";
 // import { localisationHelpToNameOfOrganization } from "../app/chariitySlicer";
-import {
-  localisation,
-  organisationName,
-  whotoHelp,
-} from "../app/chariitySlicer";
 
 const GiveFormStepTwo = (ChangeStepsProps: {
   increase: Function;
@@ -30,9 +25,6 @@ const GiveFormStepTwo = (ChangeStepsProps: {
 
   const addItems = () => {
     ChangeStepsProps.increase();
-    dispatch(localisation(city));
-    dispatch(organisationName(organizationName));
-    dispatch(whotoHelp(helpTo));
   };
 
   const cityHandler = (e: any) => {

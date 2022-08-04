@@ -2,15 +2,6 @@ import React, { useState } from "react";
 import arrowUp from "../assets/Icon-Arrow-Up.svg";
 import arrowDown from "../assets/Icon-Arrow-Down.svg";
 import { useDispatch } from "react-redux";
-import {
-  setStreet,
-  setYourCity,
-  setZipCode,
-  setPhoneNumber,
-  setPickingData,
-  notesForTheCourier,
-  setHour,
-} from "../app/chariitySlicer";
 
 const GiveFormStepFourth = (ChangeStepsProps: {
   increase: Function;
@@ -32,13 +23,6 @@ const GiveFormStepFourth = (ChangeStepsProps: {
 
   const addItems = () => {
     ChangeStepsProps.increase();
-    dispatch(setStreet(myStreet));
-    dispatch(setYourCity(myCity));
-    dispatch(setZipCode(myZipCode));
-    dispatch(setPhoneNumber(myPhoneNumber));
-    dispatch(setPickingData(collectionData));
-    dispatch(notesForTheCourier(collectionCourierInfo));
-    dispatch(setHour(collectionHour));
   };
 
   const settingStreet = (e: any) => {

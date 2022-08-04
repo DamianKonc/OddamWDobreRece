@@ -4,7 +4,7 @@ import arrowDown from "../assets/Icon-Arrow-Down.svg";
 import shirt from "../assets/shirt.svg";
 import arrows from "../assets/Icon-4.svg";
 import { useSelector } from "react-redux";
-import { helpingDatas } from "../app/chariitySlicer";
+import { FetchingData } from "./FetchingData";
 
 const GiveFormStepFifth = (ChangeStepsProps: {
   increase: Function;
@@ -13,8 +13,6 @@ const GiveFormStepFifth = (ChangeStepsProps: {
   const goBack = () => {
     ChangeStepsProps.decrease();
   };
-
-  console.log(useSelector(helpingDatas.city));
 
   const confirm = () => {
     ChangeStepsProps.increase();
@@ -31,9 +29,9 @@ const GiveFormStepFifth = (ChangeStepsProps: {
           <img className="giveFormStepFifth__charity-img" src={shirt} />
           <p className="giveFormStepFifth__charity-text">
             <span>
-              {useSelector(helpingDatas.bagQuantity)} worki,{" "}
-              {useSelector(helpingDatas.items)},{" "}
-              {useSelector(helpingDatas.helpTo)}
+              <FetchingData name="stuff" /> worki,
+              <FetchingData name="stuff" />,
+              <FetchingData name="yourCity" />
             </span>
           </p>
         </div>
