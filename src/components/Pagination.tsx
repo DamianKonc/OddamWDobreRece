@@ -1,5 +1,8 @@
 import React, { useMemo, useState, useRef, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import HelpingEl from "./HelpingEl";
+import { RootState } from "../app/store";
+import { switchActive } from "../app/activesSlicer";
 
 type PaginationData = {
   name: string;
@@ -13,9 +16,14 @@ type PaginationProps = {
 };
 
 const Pagination = (props: PaginationProps) => {
+  const isActive = useSelector(
+    (state: RootState) => state.actives.activePaginationButton
+  );
   const [btns, setbtns] = useState([1]);
-  const [currentPage, setCurrentPage] = useState(1);
+  // const [currentPage, setCurrentPage] = useState(isActive);
   const pagesCount = Math.ceil(props.data.length / props.howManyOnPage);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setbtns([]);
@@ -24,12 +32,17 @@ const Pagination = (props: PaginationProps) => {
     }
   }, [props.data]);
 
-  const endIndex = currentPage * props.howManyOnPage;
+  const endIndex = isActive * props.howManyOnPage;
   const startindex = endIndex - props.howManyOnPage;
   const currentPosts = props.data.slice(startindex, endIndex);
 
   const changePage = (e) => {
-    setCurrentPage(parseInt(e.target.value) + 1);
+    dispatch(
+      switchActive({
+        key: "activePaginationButton",
+        value: parseInt(e.target.value) + 1,
+      })
+    );
   };
 
   return (
@@ -45,7 +58,11 @@ const Pagination = (props: PaginationProps) => {
       <div className="pagination__btn-container">
         {btns.map((el, id) => (
           <button
-            className="pagination__btn"
+            className={
+              isActive == el
+                ? "pagination__btn pagination__active"
+                : "pagination__btn"
+            }
             value={id}
             onClick={changePage}
             key={id}

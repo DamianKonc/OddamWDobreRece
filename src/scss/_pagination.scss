@@ -13,3 +13,7 @@
 .pagination__btn:hover {
   cursor: pointer;
 }
+
+.pagination__active {
+  border: 0.75px solid black;
+}

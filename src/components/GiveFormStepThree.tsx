@@ -13,7 +13,7 @@ const GiveFormStepTwo = (ChangeStepsProps: {
     (state: RootState) => state.yourCharity.localisation
   );
   const helpingTo = useSelector(
-    (state: RootState) => state.yourCharity.whoToHelp
+    (state: RootState) => state.yourCharity.whoToHelp[0]
   );
   const organization = useSelector(
     (state: RootState) => state.yourCharity.organizationName
@@ -21,15 +21,15 @@ const GiveFormStepTwo = (ChangeStepsProps: {
 
   const [city, setCity] = useState(localisation);
   const [active, setActive] = useState(false);
-  const [helpTo, setHelpTo] = useState(helpingTo);
+  const [wantToHelpingTo, setwantToHelpingTo] = useState(helpingTo);
   const [organizationName, setOrganizationName] = useState(organization);
   const dispatch = useDispatch();
-
-  useEffect(() => {}, [helpTo]);
 
   const settingActive = () => {
     setActive((prev) => (prev = !prev));
   };
+
+  console.log(helpingTo);
 
   const goBack = () => {
     ChangeStepsProps.decrease();
@@ -38,8 +38,8 @@ const GiveFormStepTwo = (ChangeStepsProps: {
   const addItems = () => {
     ChangeStepsProps.increase();
     dispatch(change({ key: "localisation", value: city }));
-    dispatch(change({ key: "whoToHelp", value: helpTo }));
     dispatch(change({ key: "organizationName", value: organizationName }));
+    dispatch(change({ key: "whoToHelp", value: wantToHelpingTo }));
   };
 
   const cityHandler = (e: any) => {
@@ -48,12 +48,25 @@ const GiveFormStepTwo = (ChangeStepsProps: {
   };
 
   const helpingHandler = (e: any) => {
-    setHelpTo(e.target.value);
+    dispatch(change({ key: "whoToHelp", value: "" }));
+    setwantToHelpingTo(e.target.value);
+    console.log(e.target.value);
   };
 
   const organizationNameHandler = (e: any) => {
     setOrganizationName(e.target.value);
   };
+
+  const miasta = ["Poznań", "Warszawa", "Kraków", "Wrocław", "Katowice"];
+  const pomocDla = [
+    "dzieciom",
+    "samotnym matkom",
+    "bezdomnym",
+    "niepełnosprawnym",
+    "osobom starszym",
+  ];
+
+  // pomocDla.map((el) => console.log(el));
   return (
     <div className="giveBackFormWrapper">
       <p className="giveBackFrom__form-steps">Step 3/4</p>
@@ -70,41 +83,16 @@ const GiveFormStepTwo = (ChangeStepsProps: {
             </p>
             {active ? (
               <div className="giveBackForm__selectContainer-select-options-container giveBackForm__selectContainer-select-options-container-three">
-                <div
-                  onClick={cityHandler}
-                  id="Poznań"
-                  className="giveBackForm__selectContainer-select-option-three"
-                >
-                  Poznań
-                </div>
-                <div
-                  onClick={cityHandler}
-                  id="Warszawa"
-                  className="giveBackForm__selectContainer-select-option-three"
-                >
-                  Warszawa
-                </div>
-                <div
-                  onClick={cityHandler}
-                  id="Kraków"
-                  className="giveBackForm__selectContainer-select-option-three"
-                >
-                  Kraków
-                </div>
-                <div
-                  onClick={cityHandler}
-                  id="Wrocław"
-                  className="giveBackForm__selectContainer-select-option-three"
-                >
-                  Wrocław
-                </div>
-                <div
-                  onClick={cityHandler}
-                  id="Katowice"
-                  className="giveBackForm__selectContainer-select-option-three"
-                >
-                  Katowice
-                </div>
+                {miasta.map((el, id) => (
+                  <div
+                    key={id}
+                    onClick={cityHandler}
+                    id={el}
+                    className="giveBackForm__selectContainer-select-option-three"
+                  >
+                    {el}
+                  </div>
+                ))}
               </div>
             ) : null}
           </div>
@@ -117,60 +105,26 @@ const GiveFormStepTwo = (ChangeStepsProps: {
             onChange={helpingHandler}
             className="giveBackForm__choose-wrapper"
           >
-            <label id="dzieciom" className="giveBackForm__choose-wrapper-el">
-              dzieciom
-              <input
-                className="giveBackForm__choose-wrapper-el-input"
-                name="helpTo"
-                type="radio"
-                value="dzieciom"
-              />
-            </label>
-            <label
-              id="samotnym matkom"
-              className="giveBackForm__choose-wrapper-el"
-            >
-              samotnym matkom
-              <input
-                className="giveBackForm__choose-wrapper-el-input"
-                name="helpTo"
-                type="radio"
-                value="samotnym matkom"
-              />
-            </label>
-            <label id="bezdomnym" className="giveBackForm__choose-wrapper-el">
-              bezdomnym
-              <input
-                className="giveBackForm__choose-wrapper-el-input"
-                name="helpTo"
-                type="radio"
-                value="bezdomnym"
-              />
-            </label>
-            <label
-              id="niepełnosprawnym"
-              className="giveBackForm__choose-wrapper-el"
-            >
-              niepełnosprawnym
-              <input
-                className="giveBackForm__choose-wrapper-el-input"
-                name="helpTo"
-                type="radio"
-                value="niepełnosprawnym"
-              />
-            </label>
-            <label
-              id="osobom starszym"
-              className="giveBackForm__choose-wrapper-el"
-            >
-              osobom starszym
-              <input
-                className="giveBackForm__choose-wrapper-el-input"
-                name="helpTo"
-                type="radio"
-                value="osobom starszym"
-              />
-            </label>
+            {pomocDla.map((el, id) => (
+              <label
+                key={id}
+                id={el}
+                className="giveBackForm__choose-wrapper-el"
+              >
+                {el}
+                <input
+                  // className="giveBackForm__choose-wrapper-el-input"
+                  className={
+                    el == helpingTo
+                      ? "giveBackForm__choose-wrapper-el-input giveBackForm__choose-wrapper-el-input-active"
+                      : "giveBackForm__choose-wrapper-el-input "
+                  }
+                  name="helpTo"
+                  type="radio"
+                  value={el}
+                />
+              </label>
+            ))}
           </form>
         </div>
         <label>

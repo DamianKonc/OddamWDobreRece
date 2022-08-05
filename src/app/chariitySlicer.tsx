@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "./store";
 
 interface YourCharity {

@@ -2,14 +2,26 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../app/store";
 import { change } from "../app/chariitySlicer";
+import { switchActive } from "../app/activesSlicer";
 
 const GiveFormStepOne = (IncreaseProps) => {
-  const stuff = useSelector((state: RootState) => state.yourCharity.stuff);
+  const stuff = useSelector((state: RootState) => state.yourCharity.stuff[0]);
   const dispatch = useDispatch();
   const [items, setItems] = useState(stuff);
 
+  const datas = [
+    "ubrania, które nadają się do ponownego użycia",
+    "ubrania, do wyrzucenia",
+    "zabawki",
+    "książki",
+    "Inne",
+  ];
+
+  datas.map((el) => console.log(el));
+
   const pickingItems = (e: any) => {
     setItems(e.target.value);
+    dispatch(change({ key: "stuff", value: "" }));
   };
 
   const addStuff = () => {
@@ -25,51 +37,21 @@ const GiveFormStepOne = (IncreaseProps) => {
           Zaznacz co chcesz oddać:
         </div>
         <form onChange={pickingItems} className="giveBackFrom__form-labels">
-          <label className="giveBackFrom__form-labels-el">
-            <input
-              className="giveBackFrom__form-labels-el-input"
-              type="radio"
-              name="giveAwayItems"
-              value={"ubrania, które nadają się do ponownego użycia"}
-            />{" "}
-            ubrania, które nadają się do ponownego użycia
-          </label>
-          <label className="giveBackFrom__form-labels-el">
-            <input
-              className="giveBackFrom__form-labels-el-input"
-              type="radio"
-              name="giveAwayItems"
-              value={"ubrania, do wyrzucenia"}
-            />{" "}
-            ubrania, do wyrzucenia
-          </label>
-          <label className="giveBackFrom__form-labels-el">
-            <input
-              className="giveBackFrom__form-labels-el-input"
-              type="radio"
-              name="giveAwayItems"
-              value={"zabawki"}
-            />{" "}
-            zabawki
-          </label>
-          <label className="giveBackFrom__form-labels-el">
-            <input
-              className="giveBackFrom__form-labels-el-input"
-              type="radio"
-              name="giveAwayItems"
-              value={"książki"}
-            />{" "}
-            książki
-          </label>
-          <label className="giveBackFrom__form-labels-el">
-            <input
-              className="giveBackFrom__form-labels-el-input"
-              type="radio"
-              name="giveAwayItems"
-              value={"Inne"}
-            />{" "}
-            Inne
-          </label>
+          {datas.map((el, id) => (
+            <label key={id} className="giveBackFrom__form-labels-el">
+              <input
+                className={
+                  el === stuff
+                    ? "giveBackFrom__form-labels-el-input giveBackFrom__form-labels-el-input-active"
+                    : "giveBackFrom__form-labels-el-input"
+                }
+                type="radio"
+                name="giveAwayItems"
+                value={el}
+              />{" "}
+              {el}
+            </label>
+          ))}
         </form>
       </div>
       <button
