@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, FC } from "react";
 import arrowUp from "../assets/Icon-Arrow-Up.svg";
 import arrowDown from "../assets/Icon-Arrow-Down.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { change } from "../app/chariitySlicer";
-import { RootState } from "../app/store";
+import { change } from "../../../app/chariitySlicer";
+import { RootState } from "../../../app/store";
+import { Props } from "./type";
 
-const GiveFormStepTwo = (ChangeStepsProps: {
-  increase: Function;
-  decrease: Function;
-}) => {
+const getyouCharity = (state) => state.yourCharity;
+
+// const getYourCharityLocalisation = createSelector(
+// getyouCharity,
+// charity => charity.localisation
+// )
+
+const GiveFormStepTwo: FC<Props> = ({ increase, decrease }: Props) => {
   const localisation = useSelector(
     (state: RootState) => state.yourCharity.localisation
   );
-  const helpingTo = useSelector(
+  const helpingTo: string = useSelector(
     (state: RootState) => state.yourCharity.whoToHelp[0]
   );
   const organization = useSelector(
@@ -32,11 +37,11 @@ const GiveFormStepTwo = (ChangeStepsProps: {
   console.log(helpingTo);
 
   const goBack = () => {
-    ChangeStepsProps.decrease();
+    decrease();
   };
 
   const addItems = () => {
-    ChangeStepsProps.increase();
+    increase();
     dispatch(change({ key: "localisation", value: city }));
     dispatch(change({ key: "organizationName", value: organizationName }));
     dispatch(change({ key: "whoToHelp", value: wantToHelpingTo }));
@@ -48,7 +53,6 @@ const GiveFormStepTwo = (ChangeStepsProps: {
   };
 
   const helpingHandler = (e: any) => {
-    dispatch(change({ key: "whoToHelp", value: "" }));
     setwantToHelpingTo(e.target.value);
     console.log(e.target.value);
   };

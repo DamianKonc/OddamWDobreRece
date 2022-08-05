@@ -36,7 +36,7 @@ const GiveFormStepTwo = (ChangeStepsProps: {
     <div className="giveBackFormWrapper">
       <p className="giveBackFrom__form-steps">Step 2/4</p>
       <div>
-        <div className="giveBackFrom__form-header">
+        <div className="giveBackFrom__form-header mb-30">
           Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
         </div>
         <div className="giveBackForm__selectContainer">
