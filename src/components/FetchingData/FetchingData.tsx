@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import { RootState } from "../app/store";
+import { RootState } from "../../app/store";
 
-export const FetchingData = ({ name }) => {
+const FetchingData = ({ name }) => {
   //   const data = useSelector((state: RootState) => state.yourCharity.stuff);
   const neverSurrender = useSelector(
     (state: RootState) => state.yourCharity[name]
@@ -9,3 +9,5 @@ export const FetchingData = ({ name }) => {
 
   return <>{neverSurrender}</>;
 };
+
+export default FetchingData;

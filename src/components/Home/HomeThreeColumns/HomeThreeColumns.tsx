@@ -1,24 +1,24 @@
 import React from "react";
-import HomeThreeColumnsItem from "../../HomeThreeColumnsItem";
+import ThreeColumnsItem from "../ThreeColumnsItem/HomeThreeColumnsItem";
 
 const HomeThreeColumns = () => {
   return (
     <section id="homeThreeColumns" className="homeThreeColumns">
-      <HomeThreeColumnsItem
+      <ThreeColumnsItem
         howMuch={10}
         toWhat={"ODDANYCH WORKÓW"}
         paragraph={
           "Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat."
         }
       />
-      <HomeThreeColumnsItem
+      <ThreeColumnsItem
         howMuch={5}
         toWhat={"WSPARTYCH ORGANIZACJI"}
         paragraph={
           "Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat."
         }
       />
-      <HomeThreeColumnsItem
+      <ThreeColumnsItem
         howMuch={7}
         toWhat={"ZORGANIZOWANY ZBIÓREK"}
         paragraph={

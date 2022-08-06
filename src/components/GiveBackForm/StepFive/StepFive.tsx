@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import shirt from "../../../assets/shirt.svg";
 import arrows from "../../../assets/Icon-4.svg";
 import { useSelector } from "react-redux";
-import { FetchingData } from "../../FetchingData";
+import FetchingData from "../../FetchingData";
 
 const StepFive = (ChangeStepsProps: {
   increase: Function;

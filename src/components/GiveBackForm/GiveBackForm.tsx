@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ContactField from "./ContactField/ContactField";
-import Footer from "../Footer";
+import Footer from "../Footer/Footer";
 import StepOne from "./StepOne";
 import GiveBackFormHero from "./GiveBackFormHero";
 import GiveBackFormImportant from "./GiveBackFormImportant";

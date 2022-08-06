@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import instagramIcon from "../assets/Instagram.svg";
-import facebookIcon from "../assets/Facebook.svg";
+import instagramIcon from "../../assets/Instagram.svg";
+import facebookIcon from "../../assets/Facebook.svg";
 
 const Footer = () => {
   return (

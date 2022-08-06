@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Logo from "./Logo";
-import HelpingButton from "./HelpingButton";
-import Pagination from "./Pagination";
+import Logo from "../../Logo";
+import HelpingButton from "../HelpingButton/HelpingButton";
+import Pagination from "../../Pagination";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../app/firebaceConfig";
+import { db } from "../../../app/firebaceConfig";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "../app/datasSlicer";
-import { RootState } from "../app/store";
-import { switchActive } from "../app/activesSlicer";
+import { fetchData } from "../../../app/datasSlicer";
+import { RootState } from "../../../app/store";
+import { switchActive } from "../../../app/activesSlicer";
 
 const Helping = () => {
   interface Items {

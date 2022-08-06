@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "../app/store";
+import { RootState } from "../../../app/store";
 
 interface ButtonProps {
   text: string;

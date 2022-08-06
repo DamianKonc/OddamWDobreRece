@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useRef, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import HelpingEl from "./HelpingEl";
+import HelpingEl from "./Home/HelpingEl/HelpingEl";
 import { RootState } from "../app/store";
 import { switchActive } from "../app/activesSlicer";
 

@@ -6,7 +6,7 @@ type HomeThreeColumnsItemProps = {
   paragraph: string;
 };
 
-const HomeThreeColumnsItem = (props: HomeThreeColumnsItemProps) => {
+const ThreeColumnsItem = (props: HomeThreeColumnsItemProps) => {
   return (
     <div className="homeThreeColumnsItem">
       <h2 className="homeThreeColumnsItem__counter">{props.howMuch}</h2>
@@ -16,4 +16,4 @@ const HomeThreeColumnsItem = (props: HomeThreeColumnsItemProps) => {
   );
 };
 
-export default HomeThreeColumnsItem;
+export default ThreeColumnsItem;
