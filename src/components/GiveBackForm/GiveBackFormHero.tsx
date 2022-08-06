@@ -1,6 +1,6 @@
 import React from "react";
-import Navigation from "./Navigation";
-import HeaderTitle from "./HeaderTitle";
+import Navigation from "../Navigation";
+import HeaderTitle from "../HeaderTitle";
 
 const GiveBackFormHero = () => {
   return (

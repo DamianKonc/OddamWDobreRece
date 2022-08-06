@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import ContactField from "./ContactField";
-import Footer from "./Footer";
+import ContactField from "../ContactField";
+import Footer from "../Footer";
 import GiveFormStepOne from "./GiveFormStepOne";
 import GiveBackFormHero from "./GiveBackFormHero";
 import GiveBackFormImportant from "./GiveBackFormImportant";
 import GiveFormStepTwo from "./GiveFormStepTwo";
-import GiveFormStepThree from "./GiveFormStepThree";
+import StepThree from "./StepThree";
 import GiveFormStepFourth from "./GiveFormStepFourth";
 import GiveFormStepFifth from "./GiveFormStepFith";
 import GiveFormStepSixth from "./GiveFormStepSixth";
@@ -52,10 +52,7 @@ const GiveBackForm = () => {
           <GiveBackFormHero />
           <GiveBackFormImportant />
           <div className="giveBackFrom__form">
-            <GiveFormStepThree
-              increase={increseSteps}
-              decrease={decreaseSteps}
-            />
+            <StepThree increase={increseSteps} decrease={decreaseSteps} />
           </div>
           <ContactField />
           <Footer />

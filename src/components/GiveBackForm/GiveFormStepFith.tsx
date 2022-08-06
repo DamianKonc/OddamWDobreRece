@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import arrowUp from "../assets/Icon-Arrow-Up.svg";
-import arrowDown from "../assets/Icon-Arrow-Down.svg";
-import shirt from "../assets/shirt.svg";
-import arrows from "../assets/Icon-4.svg";
+import arrowUp from "../../assets/Icon-Arrow-Up.svg";
+import arrowDown from "../../assets/Icon-Arrow-Down.svg";
+import shirt from "../../assets/shirt.svg";
+import arrows from "../../assets/Icon-4.svg";
 import { useSelector } from "react-redux";
-import { FetchingData } from "./FetchingData";
+import { FetchingData } from "../FetchingData";
 
 const GiveFormStepFifth = (ChangeStepsProps: {
   increase: Function;

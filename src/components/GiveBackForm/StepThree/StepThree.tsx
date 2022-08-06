@@ -1,6 +1,6 @@
 import React, { useEffect, useState, FC } from "react";
-import arrowUp from "../assets/Icon-Arrow-Up.svg";
-import arrowDown from "../assets/Icon-Arrow-Down.svg";
+import arrowUp from "../../../assets/Icon-Arrow-Up.svg";
+import arrowDown from "../../../assets/Icon-Arrow-Down.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { change } from "../../../app/chariitySlicer";
 import { RootState } from "../../../app/store";
@@ -13,7 +13,7 @@ const getyouCharity = (state) => state.yourCharity;
 // charity => charity.localisation
 // )
 
-const GiveFormStepTwo: FC<Props> = ({ increase, decrease }: Props) => {
+const StepThree: FC<Props> = ({ increase, decrease }: Props) => {
   const localisation = useSelector(
     (state: RootState) => state.yourCharity.localisation
   );
@@ -155,4 +155,4 @@ const GiveFormStepTwo: FC<Props> = ({ increase, decrease }: Props) => {
   );
 };
 
-export default GiveFormStepTwo;
+export default StepThree;

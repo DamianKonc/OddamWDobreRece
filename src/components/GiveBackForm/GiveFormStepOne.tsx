@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../app/store";
-import { change } from "../app/chariitySlicer";
-import { switchActive } from "../app/activesSlicer";
+import { RootState } from "../../app/store";
+import { change } from "../../app/chariitySlicer";
+import { switchActive } from "../../app/activesSlicer";
 
 const GiveFormStepOne = (IncreaseProps) => {
   const stuff = useSelector((state: RootState) => state.yourCharity.stuff[0]);
