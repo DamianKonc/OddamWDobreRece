@@ -3,9 +3,9 @@ import HomeHeader from "./HomeHeader";
 import HomeThreeColumns from "./HomeThreeColumns";
 import SimpleSteps from "./SimpleSteps";
 import AbooutUs from "./AboutUs";
-import Helping from "./Helping";
-import ContactField from "./ContactField";
-import Footer from "./Footer";
+import Helping from "../Helping";
+import ContactField from "../GiveBackForm/ContactField/ContactField";
+import Footer from "../Footer";
 import { useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
 

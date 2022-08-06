@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../app/store";
-import { change } from "../../app/chariitySlicer";
-import { switchActive } from "../../app/activesSlicer";
+import { RootState } from "../../../app/store";
+import { change } from "../../../app/chariitySlicer";
+import { switchActive } from "../../../app/activesSlicer";
 
-const GiveFormStepOne = (IncreaseProps) => {
+const StepOne = (IncreaseProps) => {
   const stuff = useSelector((state: RootState) => state.yourCharity.stuff[0]);
   const dispatch = useDispatch();
   const [items, setItems] = useState(stuff);
@@ -64,4 +64,4 @@ const GiveFormStepOne = (IncreaseProps) => {
   );
 };
 
-export default GiveFormStepOne;
+export default StepOne;

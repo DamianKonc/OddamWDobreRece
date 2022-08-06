@@ -1,16 +1,16 @@
 import React from "react";
-import HeaderTitle from "./HeaderTitle";
-import SimpleStepsItem from "./SimpleStepsItem";
-import shirtImage from "../assets/shirt.svg";
-import bagImage from "../assets/Icon-2.svg";
-import magnifyGlassImage from "../assets/Icon-3.svg";
-import arrowsImage from "../assets/Icon-4.svg";
-import MainButton from "./MainButton";
+import Logo from "../../Logo";
+import SimpleStepsItem from "../../SimpleStepsItem";
+import shirtImage from "../../../assets/shirt.svg";
+import bagImage from "../../../assets/Icon-2.svg";
+import magnifyGlassImage from "../../../assets/Icon-3.svg";
+import arrowsImage from "../../../assets/Icon-4.svg";
+import MainButton from "../../MainButton";
 
 const SimpleSteps = () => {
   return (
     <section className="simplesteps">
-      <HeaderTitle text="Wystarczą 4 proste kroki" />
+      <Logo text="Wystarczą 4 proste kroki" />
       <div className="simplesteps__elements">
         <SimpleStepsItem
           imageSrc={shirtImage}

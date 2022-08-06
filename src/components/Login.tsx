@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navigation from "./Navigation";
-import HeaderTitle from "./HeaderTitle";
+import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
@@ -39,7 +39,7 @@ const Login = () => {
     <div className="login-register">
       <Navigation />
       <div className="login-register__wrapper">
-        <HeaderTitle text="Zaloguj się" />
+        <Logo text="Zaloguj się" />
 
         {error ? <div className="errorMessage">{error}</div> : null}
         {message ? <div className="message">{message}</div> : null}

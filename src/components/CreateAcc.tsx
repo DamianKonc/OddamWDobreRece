@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navigation from "./Navigation";
-import HeaderTitle from "./HeaderTitle";
+import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -50,7 +50,7 @@ const CreateApp = () => {
     <div className="login-register">
       <Navigation />
       <div className="login-register__wrapper">
-        <HeaderTitle text="Załóż konto" />
+        <Logo text="Załóż konto" />
         {error ? <div className="errorMessage">{error}</div> : null}
         {message ? <div className="message">{message}</div> : null}
         <form className="login-register__form">

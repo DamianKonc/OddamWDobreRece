@@ -1,14 +1,14 @@
 import React from "react";
-import Navigation from "./Navigation";
-import HeaderTitle from "./HeaderTitle";
-import MainButton from "./MainButton";
+import Navigation from "../../Navigation";
+import Logo from "../../Logo";
+import MainButton from "../../MainButton";
 
 const Hero = () => {
   return (
     <div className="hero">
       <Navigation />
       <div className="hero__container">
-        <HeaderTitle
+        <Logo
           text="Zacznij pomagać!"
           text2=" Oddaj niechciane rzeczy w zaufane ręce"
         />

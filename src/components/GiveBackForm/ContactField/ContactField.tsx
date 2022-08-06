@@ -1,12 +1,11 @@
 import React from "react";
-import Footer from "./Footer";
-import HeaderTitle from "./HeaderTitle";
+import Logo from "../../Logo";
 
 const ContactField = () => {
   return (
     <section id="Contact" className="contactField">
       <div className="contactField__wrapper">
-        <HeaderTitle text="Skontaktuj się z nami" />
+        <Logo text="Skontaktuj się z nami" />
         <form className="contactField__form">
           <div className="contactField__form-wrapper">
             <label className="contactField__form-wrapper-label  contactField__form-smallLabel">

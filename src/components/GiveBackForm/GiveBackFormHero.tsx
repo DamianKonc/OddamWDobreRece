@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "../Navigation";
-import HeaderTitle from "../HeaderTitle";
+import Logo from "../Logo";
 
 const GiveBackFormHero = () => {
   return (
@@ -8,9 +8,7 @@ const GiveBackFormHero = () => {
       <Navigation />
       <header className="giveBackForm__header">
         <div className="giveBackForm__header-wrapper">
-          <HeaderTitle
-            text={`Oddaj rzeczy, których już nie chcesz POTRZEBUJĄCYM`}
-          />
+          <Logo text={`Oddaj rzeczy, których już nie chcesz POTRZEBUJĄCYM`} />
         </div>
         <div className="giveBackForm__image" />
         <div>

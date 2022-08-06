@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import HeaderTitle from "./HeaderTitle";
+import Logo from "./Logo";
 import HelpingButton from "./HelpingButton";
 import Pagination from "./Pagination";
 import { collection, getDocs } from "firebase/firestore";
@@ -91,7 +91,7 @@ const Helping = () => {
 
   return (
     <section id="fundationsAndOrganisations" className="helping">
-      <HeaderTitle text="Komu pomagamy?" />
+      <Logo text="Komu pomagamy?" />
 
       <div className="helping__btns">
         <HelpingButton

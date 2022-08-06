@@ -1,5 +1,5 @@
 import React from "react";
-import HomeThreeColumnsItem from "./HomeThreeColumnsItem";
+import HomeThreeColumnsItem from "../../HomeThreeColumnsItem";
 
 const HomeThreeColumns = () => {
   return (

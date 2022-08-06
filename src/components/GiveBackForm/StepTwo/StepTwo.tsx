@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import arrowUp from "../../assets/Icon-Arrow-Up.svg";
-import arrowDown from "../../assets/Icon-Arrow-Down.svg";
+import arrowUp from "../../../assets/Icon-Arrow-Up.svg";
+import arrowDown from "../../../assets/Icon-Arrow-Down.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { change } from "../../app/chariitySlicer";
-import { RootState } from "../../app/store";
+import { change } from "../../../app/chariitySlicer";
+import { RootState } from "../../../app/store";
 
-const GiveFormStepTwo = (ChangeStepsProps: {
+const StepTwo = (ChangeStepsProps: {
   increase: Function;
   decrease: Function;
 }) => {
@@ -106,4 +106,4 @@ const GiveFormStepTwo = (ChangeStepsProps: {
   );
 };
 
-export default GiveFormStepTwo;
+export default StepTwo;

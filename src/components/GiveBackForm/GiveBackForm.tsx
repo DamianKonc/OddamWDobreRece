@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import ContactField from "../ContactField";
+import ContactField from "./ContactField/ContactField";
 import Footer from "../Footer";
-import GiveFormStepOne from "./GiveFormStepOne";
+import StepOne from "./StepOne";
 import GiveBackFormHero from "./GiveBackFormHero";
 import GiveBackFormImportant from "./GiveBackFormImportant";
-import GiveFormStepTwo from "./GiveFormStepTwo";
+import StepTwo from "./StepTwo";
 import StepThree from "./StepThree";
-import GiveFormStepFourth from "./GiveFormStepFourth";
-import GiveFormStepFifth from "./GiveFormStepFith";
-import GiveFormStepSixth from "./GiveFormStepSixth";
+import StepFourth from "./StepFour";
+import StepFive from "./StepFive";
+import StepSix from "./StepSix";
 
 const GiveBackForm = () => {
   const [steps, setSteps] = useState(1);
@@ -28,7 +28,7 @@ const GiveBackForm = () => {
           <GiveBackFormHero />
           <GiveBackFormImportant />
           <div className="giveBackFrom__form">
-            <GiveFormStepOne increase={increseSteps} />
+            <StepOne increase={increseSteps} />
           </div>
           <ContactField />
           <Footer />
@@ -40,7 +40,7 @@ const GiveBackForm = () => {
           <GiveBackFormHero />
           <GiveBackFormImportant />
           <div className="giveBackFrom__form">
-            <GiveFormStepTwo increase={increseSteps} decrease={decreaseSteps} />
+            <StepTwo increase={increseSteps} decrease={decreaseSteps} />
           </div>
           <ContactField />
           <Footer />
@@ -64,10 +64,7 @@ const GiveBackForm = () => {
           <GiveBackFormHero />
           <GiveBackFormImportant />
           <div className="giveBackFrom__form">
-            <GiveFormStepFourth
-              increase={increseSteps}
-              decrease={decreaseSteps}
-            />
+            <StepFourth increase={increseSteps} decrease={decreaseSteps} />
           </div>
           <ContactField />
           <Footer />
@@ -79,10 +76,7 @@ const GiveBackForm = () => {
           <GiveBackFormHero />
           <GiveBackFormImportant />
           <div className="giveBackFrom__form">
-            <GiveFormStepFifth
-              increase={increseSteps}
-              decrease={decreaseSteps}
-            />
+            <StepFive increase={increseSteps} decrease={decreaseSteps} />
           </div>
           <ContactField />
           <Footer />
@@ -94,7 +88,7 @@ const GiveBackForm = () => {
           <GiveBackFormHero />
           <GiveBackFormImportant />
           <div className="giveBackFrom__form">
-            <GiveFormStepSixth />
+            <StepSix />
           </div>
           <ContactField />
           <Footer />

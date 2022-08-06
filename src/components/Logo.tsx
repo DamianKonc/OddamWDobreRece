@@ -5,7 +5,7 @@ type HeaderText = {
   text2?: string;
 };
 
-const HeaderTitle = (props: HeaderText) => {
+const Logo = (props: HeaderText) => {
   return (
     <div className="headerTitle">
       <h1 className="headerTitle__title">
@@ -17,4 +17,4 @@ const HeaderTitle = (props: HeaderText) => {
   );
 };
 
-export default HeaderTitle;
+export default Logo;

@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderTitle from "./HeaderTitle";
+import Logo from "./Logo";
 import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const LogOut = () => {
       <Navigation />
       <div className="logout__text">
         <div className="logout__header-wrapper">
-          <HeaderTitle text="Wylogowanie nastąpiło pomyślnie!" />
+          <Logo text="Wylogowanie nastąpiło pomyślnie!" />
         </div>
         <Link className="logout__btn" to="/">
           Strona główna
