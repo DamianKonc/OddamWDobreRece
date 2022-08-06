@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../Logo";
-import SimpleStepsItem from "../../SimpleStepsItem";
+import SimpleStepsItem from "../SimpleStepsItem";
 import shirtImage from "../../../assets/shirt.svg";
 import bagImage from "../../../assets/Icon-2.svg";
 import magnifyGlassImage from "../../../assets/Icon-3.svg";

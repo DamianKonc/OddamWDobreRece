@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "./Logo";
-import Navigation from "./Navigation";
+import Logo from "../Logo";
+import Navigation from "../Navigation/MainNav";
 import { Link } from "react-router-dom";
 
 const LogOut = () => {

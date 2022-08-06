@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navigation from "../Navigation";
+import Navigation from "../Navigation/MainNav";
 import Logo from "../Logo";
 import { Link } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import LinkElScroll from "./LinkElScroll";
-import LinkElRoute from "./LinkElRoute";
+import LinkElScroll from "../../LinkElScroll/LinkElScroll";
+import LinkElRoute from "../../LinkElRoute/LinkElRoute";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { Link } from "react-router-dom";
 
