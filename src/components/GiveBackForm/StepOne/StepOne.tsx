@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, FormEvent, ChangeEvent } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../app/store";
 import { change } from "../../../app/chariitySlicer";
@@ -19,9 +19,11 @@ const StepOne = ({ increase }: Props) => {
 
   datas.map((el) => console.log(el));
 
-  const pickingItems = (e: any) => {
-    setItems(e.target.value);
+  const pickingItems = (e: React.FormEvent<EventTarget>): void => {
     dispatch(change({ key: "stuff", value: "" }));
+    const item = e.target as HTMLInputElement;
+    console.log(item.value);
+    setItems(item.value);
   };
 
   const addStuff = () => {
