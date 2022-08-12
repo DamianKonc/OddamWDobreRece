@@ -1,17 +1,10 @@
-import React, { useEffect, useState, FC } from "react";
+import React, { useState, FC } from "react";
 import arrowUp from "../../../assets/Icon-Arrow-Up.svg";
 import arrowDown from "../../../assets/Icon-Arrow-Down.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { change } from "../../../app/chariitySlicer";
 import { RootState } from "../../../app/store";
 import { Props } from "./type";
-
-const getyouCharity = (state) => state.yourCharity;
-
-// const getYourCharityLocalisation = createSelector(
-// getyouCharity,
-// charity => charity.localisation
-// )
 
 const StepThree: FC<Props> = ({ increase, decrease }: Props) => {
   const localisation = useSelector(
@@ -70,7 +63,6 @@ const StepThree: FC<Props> = ({ increase, decrease }: Props) => {
     "osobom starszym",
   ];
 
-  // pomocDla.map((el) => console.log(el));
   return (
     <div className="giveBackFormWrapper">
       <p className="giveBackFrom__form-steps">Step 3/4</p>
@@ -83,7 +75,11 @@ const StepThree: FC<Props> = ({ increase, decrease }: Props) => {
               className="giveBackForm__selectContainer-select-title giveBackForm__selectContainer-select-title-three"
             >
               {city}
-              {active ? <img src={arrowUp} /> : <img src={arrowDown} />}
+              {active ? (
+                <img alt="arrowUp" src={arrowUp} />
+              ) : (
+                <img alt="arrowDown" src={arrowDown} />
+              )}
             </p>
             {active ? (
               <div className="giveBackForm__selectContainer-select-options-container giveBackForm__selectContainer-select-options-container-three">
@@ -119,7 +115,7 @@ const StepThree: FC<Props> = ({ increase, decrease }: Props) => {
                 <input
                   // className="giveBackForm__choose-wrapper-el-input"
                   className={
-                    el == helpingTo
+                    el === helpingTo
                       ? "giveBackForm__choose-wrapper-el-input giveBackForm__choose-wrapper-el-input-active"
                       : "giveBackForm__choose-wrapper-el-input "
                   }

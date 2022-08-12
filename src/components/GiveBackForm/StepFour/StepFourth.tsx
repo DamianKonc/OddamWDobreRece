@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import arrowUp from "../../assets/Icon-Arrow-Up.svg";
-import arrowDown from "../../assets/Icon-Arrow-Down.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../app/store";
 import { change } from "../../../app/chariitySlicer";
+import { Props } from "./type";
+import { FormControlEvent, TextAreaControlEvent } from "./type";
 
-const StepFour = (ChangeStepsProps: {
-  increase: Function;
-  decrease: Function;
-}) => {
+const StepFour = ({ increase, decrease }: Props) => {
   const yourCity = useSelector(
     (state: RootState) => state.yourCharity.yourCity
   );
@@ -43,11 +40,11 @@ const StepFour = (ChangeStepsProps: {
   const dispatch = useDispatch();
 
   const goBack = () => {
-    ChangeStepsProps.decrease();
+    decrease();
   };
 
   const addItems = () => {
-    ChangeStepsProps.increase();
+    increase();
     dispatch(change({ key: "street", value: myStreet }));
     dispatch(change({ key: "yourCity", value: myCity }));
     dispatch(change({ key: "zipCode", value: myZipCode }));
@@ -59,32 +56,32 @@ const StepFour = (ChangeStepsProps: {
     );
   };
 
-  const settingStreet = (e: any) => {
-    setMystreet(e.target.value);
+  const settingStreet = (e: FormControlEvent) => {
+    setMystreet(e.currentTarget.value);
   };
 
-  const settingMyCity = (e: any) => {
-    setMyCity(e.target.value);
+  const settingMyCity = (e: FormControlEvent) => {
+    setMyCity(e.currentTarget.value);
   };
 
-  const settingMyZipCode = (e: any) => {
-    setMyZipCode(e.target.value);
+  const settingMyZipCode = (e: FormControlEvent) => {
+    setMyZipCode(e.currentTarget.value);
   };
 
-  const settingMyPhoneNumer = (e: any) => {
-    setMyPhoneNumber(e.target.value);
+  const settingMyPhoneNumer = (e: FormControlEvent) => {
+    setMyPhoneNumber(e.currentTarget.value);
   };
 
-  const settingCollectionData = (e: any) => {
-    setCollectionData(e.target.value);
+  const settingCollectionData = (e: FormControlEvent) => {
+    setCollectionData(e.currentTarget.value);
   };
 
-  const settingCollectionHour = (e: any) => {
-    setCollectionHour(e.target.value);
+  const settingCollectionHour = (e: FormControlEvent) => {
+    setCollectionHour(e.currentTarget.value);
   };
 
-  const settingColletionCourierInfo = (e: any) => {
-    setCollectionCourierInfo(e.target.value);
+  const settingColletionCourierInfo = (e: TextAreaControlEvent) => {
+    setCollectionCourierInfo(e.currentTarget.value);
   };
 
   return (

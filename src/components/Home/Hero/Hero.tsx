@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "../../Navigation/MainNav";
 import Logo from "../../Logo";
-import MainButton from "../../MainButton";
+import MainButton from "../../MainButton/MainButton";
 
 const Hero = () => {
   return (

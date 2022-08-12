@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import instagramIcon from "../../assets/Instagram.svg";
 import facebookIcon from "../../assets/Facebook.svg";
 
@@ -9,10 +8,10 @@ const Footer = () => {
       <div className="footer__copy">Copyright Coders Lab</div>
       <div className="footer__socials">
         <a href="https://www.facebook.com/">
-          <img src={facebookIcon} />
+          <img alt="facebook icon" src={facebookIcon} />
         </a>
         <a href="https://www.instagram.com/">
-          <img src={instagramIcon} />
+          <img alt="instagram icon" src={instagramIcon} />
         </a>
       </div>
     </footer>

@@ -5,7 +5,7 @@ import shirtImage from "../../../assets/shirt.svg";
 import bagImage from "../../../assets/Icon-2.svg";
 import magnifyGlassImage from "../../../assets/Icon-3.svg";
 import arrowsImage from "../../../assets/Icon-4.svg";
-import MainButton from "../../MainButton";
+import MainButton from "../../MainButton/MainButton";
 
 const SimpleSteps = () => {
   return (

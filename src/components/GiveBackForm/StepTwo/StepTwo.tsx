@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import arrowUp from "../../../assets/Icon-Arrow-Up.svg";
 import arrowDown from "../../../assets/Icon-Arrow-Down.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { change } from "../../../app/chariitySlicer";
 import { RootState } from "../../../app/store";
+import { Props } from "./type";
+import { bagQuantityType } from "./type";
 
-const StepTwo = (ChangeStepsProps: {
-  increase: Function;
-  decrease: Function;
-}) => {
+const StepTwo = ({ increase, decrease }: Props) => {
   const bags = useSelector((state: RootState) => state.yourCharity.howManyBags);
   const [bagsQuantityState, setBagsQuantityState] = useState(bags);
   const [active, setActive] = useState(false);
@@ -19,16 +18,17 @@ const StepTwo = (ChangeStepsProps: {
   };
 
   const goBack = () => {
-    ChangeStepsProps.decrease();
+    decrease();
   };
 
   const addItems = () => {
-    ChangeStepsProps.increase();
+    increase();
     dispatch(change({ key: "howManyBags", value: bagsQuantityState }));
   };
 
-  const handleBagsQuantity = (e: any) => {
-    setBagsQuantityState(e.target.id);
+  const handleBagsQuantity = (e: bagQuantityType) => {
+    const bagsQuantyty = (e.target as HTMLDivElement).id;
+    setBagsQuantityState(bagsQuantyty);
     setActive(false);
   };
 
@@ -49,7 +49,11 @@ const StepTwo = (ChangeStepsProps: {
               className="giveBackForm__selectContainer-select-title"
             >
               {bagsQuantityState}{" "}
-              {active ? <img src={arrowUp} /> : <img src={arrowDown} />}
+              {active ? (
+                <img alt="arrowUp" src={arrowUp} />
+              ) : (
+                <img alt="arrowDown" src={arrowDown} />
+              )}
             </p>
             {active ? (
               <div className="giveBackForm__selectContainer-select-options-container">

@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import shirt from "../../../assets/shirt.svg";
 import arrows from "../../../assets/Icon-4.svg";
-import { useSelector } from "react-redux";
 import FetchingData from "../../FetchingData";
+import { Props } from "./type";
 
-const StepFive = (ChangeStepsProps: {
-  increase: Function;
-  decrease: Function;
-}) => {
+const StepFive = ({ increase, decrease }: Props) => {
   const goBack = () => {
-    ChangeStepsProps.decrease();
+    decrease();
   };
 
   const confirm = () => {
-    ChangeStepsProps.increase();
+    increase();
   };
 
   return (
@@ -24,7 +21,11 @@ const StepFive = (ChangeStepsProps: {
 
       <div className="giveBackForm__fourth-forms-adresForm mb-50">
         <div className="giveFormStepFifth__charity  mb-20">
-          <img className="giveFormStepFifth__charity-img" src={shirt} />
+          <img
+            alt="shirt"
+            className="giveFormStepFifth__charity-img"
+            src={shirt}
+          />
           <p className="giveFormStepFifth__charity-text">
             <span>
               <FetchingData name="howManyBags" /> worki,
@@ -35,7 +36,11 @@ const StepFive = (ChangeStepsProps: {
         </div>
 
         <div className="giveFormStepFifth__charity ">
-          <img className="giveFormStepFifth__charity-img" src={arrows} />
+          <img
+            alt="2arrows"
+            className="giveFormStepFifth__charity-img"
+            src={arrows}
+          />
           <p className="giveFormStepFifth__charity-text">
             <span>
               dla lokalizacji: <FetchingData name="localisation" />

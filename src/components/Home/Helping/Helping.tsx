@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../../Logo";
 import HelpingButton from "../HelpingButton/HelpingButton";
-import Pagination from "../../Pagination";
+import Pagination from "../../Pagination/Pagination";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../app/firebaceConfig";
 import { useSelector, useDispatch } from "react-redux";

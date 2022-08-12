@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../app/store";
 import { change } from "../../../app/chariitySlicer";
-import { switchActive } from "../../../app/activesSlicer";
+import { Props } from "./type";
 
-const StepOne = (IncreaseProps) => {
+const StepOne = ({ increase }: Props) => {
   const stuff = useSelector((state: RootState) => state.yourCharity.stuff[0]);
   const dispatch = useDispatch();
   const [items, setItems] = useState(stuff);
@@ -25,7 +25,7 @@ const StepOne = (IncreaseProps) => {
   };
 
   const addStuff = () => {
-    IncreaseProps.increase();
+    increase();
     dispatch(change({ key: "stuff", value: items }));
   };
 
