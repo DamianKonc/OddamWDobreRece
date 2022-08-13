@@ -1,3 +1,14 @@
+@import "./settings/breakPoints";
+
 .homeHeader {
   display: flex;
+}
+
+@media (max-width: $smallTabletScreens) {
+  .homeHeader {
+    padding-top: 20px;
+  }
+  .heroIMG {
+    display: none;
+  }
 }

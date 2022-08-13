@@ -1,3 +1,8 @@
+@import "./settings/breakPoints";
+.navigation__container {
+  position: relative;
+}
+
 .navigation {
   padding-top: 2rem;
   margin-right: 10rem;
@@ -15,4 +20,104 @@
 .navigation__greeting {
   font-size: 1.4rem;
   margin-right: 20px;
+}
+
+.navigation__burger {
+  display: none;
+}
+
+@media (max-width: $bigPhoneScreens) {
+  .navigation__burger {
+    display: block;
+  }
+  .navigation {
+    display: none;
+    top: 0;
+    left: 10%;
+    flex-direction: column;
+    position: fixed;
+    background-color: white;
+    padding: 20px;
+    width: 60%;
+    border: 0.75px solid black;
+  }
+  .navigation__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .check {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    opacity: 0;
+    z-index: 3;
+  }
+
+  .check:hover {
+    cursor: pointer;
+  }
+
+  .check:checked ~ .menu-items {
+    display: block;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  .ham-menu {
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    padding: 0.5rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: black;
+    border-radius: 0.25em;
+  }
+
+  .ham-menu .line {
+    background-color: white;
+    border-radius: 1em;
+    width: 2rem;
+    height: 0.25rem;
+  }
+
+  .ham-menu .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 100ms ease-in-out;
+  }
+
+  .ham-menu .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 100ms ease-in-out;
+  }
+
+  .check:checked ~ .ham-menu .line1 {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(45deg) translate(-50%, -50%);
+  }
+
+  .check:checked ~ .ham-menu .line2 {
+    opacity: 0;
+  }
+
+  .check:checked ~ .ham-menu .line3 {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(-45deg) translate(-50%, -50%);
+  }
 }

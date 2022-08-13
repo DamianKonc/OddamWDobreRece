@@ -39,7 +39,7 @@ const StepTwo = ({ increase, decrease }: Props) => {
         <div className="giveBackFrom__form-header mb-30">
           Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
         </div>
-        <div className="giveBackForm__selectContainer">
+        <div className="giveBackForm__selectContainer mb-300">
           <p className="giveBackForm__selectContainer-text">
             Liczba 60l worków:
           </p>

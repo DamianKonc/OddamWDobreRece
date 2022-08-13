@@ -4,4 +4,12 @@
   background-image: url(../assets/3ColumnsBackground.png);
   padding: 4.6rem 16.3rem 8.6rem;
   margin-bottom: 5.5rem;
+  gap: 20px;
+}
+
+@media (max-width: $smallTabletScreens) {
+  .homeThreeColumns {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
 }

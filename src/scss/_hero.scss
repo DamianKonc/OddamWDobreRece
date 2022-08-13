@@ -1,9 +1,34 @@
+@import "./settings/breakPoints";
+
 .hero {
   width: 50%;
 }
 
+@media (max-width: $largeScreens) {
+  .hero {
+    width: 70%;
+  }
+}
+
+@media (max-width: $tabletScreens) {
+  .hero {
+    width: 90%;
+  }
+}
+
 .hero__container {
   width: fit-content;
+}
+
+@media (max-width: $smallTabletScreens) {
+  .hero {
+    width: 100%;
+    margin-bottom: 300px;
+  }
+
+  .hero__container {
+    margin: 0 auto;
+  }
 }
 
 .hero__btns {
