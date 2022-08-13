@@ -1,23 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-type SimpleStepsItemProps = {
-  imageSrc: string;
-  imageAlt: string;
-  header: string;
-  paragraph: string;
-};
+import { Props } from "./type";
 
-const SimpleStepsItem = (props: SimpleStepsItemProps) => {
+const SimpleStepsItem = ({ imageSrc, imageAlt, header, paragraph }: Props) => {
   return (
     <div className="simpleStepsItem">
-      <img
-        className="simpleStepsItem__img"
-        src={props.imageSrc}
-        alt={props.imageAlt}
-      />
-      <h4 className="simpleStepsItem__header">{props.header}</h4>
+      <img className="simpleStepsItem__img" src={imageSrc} alt={imageAlt} />
+      <h4 className="simpleStepsItem__header">{header}</h4>
       <div className="simpleStepsItem__line" />
-      <p className="simpleStepsItem__text">{props.paragraph}</p>
+      <p className="simpleStepsItem__text">{paragraph}</p>
     </div>
   );
 };

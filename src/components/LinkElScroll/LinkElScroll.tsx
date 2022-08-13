@@ -1,16 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Props } from "./type";
 
-type LinkProps = {
-  text: string;
-  link: string;
-};
-
-const LinkElScroll = (props: LinkProps) => {
+const LinkElScroll = ({ text, link }: Props) => {
   return (
     <li className="linkElScroll">
-      <NavLink to={`/#${props.link}`} className="linkElScroll__link">
-        {props.text}
+      <NavLink to={`/#${link}`} className="linkElScroll__link">
+        {text}
       </NavLink>
     </li>
   );

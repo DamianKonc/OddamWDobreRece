@@ -1,16 +1,12 @@
 import React from "react";
+import { Props } from "./type";
 
-type HeaderText = {
-  text: string;
-  text2?: string;
-};
-
-const Logo = (props: HeaderText) => {
+const Logo = ({ text, text2 }: Props) => {
   return (
     <div className="headerTitle">
       <h1 className="headerTitle__title">
-        <p>{props.text}</p>
-        <p>{props.text2}</p>
+        <p>{text}</p>
+        <p>{text2}</p>
       </h1>
       <div className="headerTitle__img" />
     </div>

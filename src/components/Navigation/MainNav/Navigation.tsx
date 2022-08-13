@@ -26,7 +26,9 @@ const Navigation = () => {
       .then(() => {
         setIsLogged(false);
       })
-      .catch((error) => {});
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (

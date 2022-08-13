@@ -1,17 +1,13 @@
 import React from "react";
 
-type HomeThreeColumnsItemProps = {
-  howMuch: number;
-  toWhat: string;
-  paragraph: string;
-};
+import { Props } from "./type";
 
-const ThreeColumnsItem = (props: HomeThreeColumnsItemProps) => {
+const ThreeColumnsItem = ({ howMuch, toWhat, paragraph }: Props) => {
   return (
     <div className="homeThreeColumnsItem">
-      <h2 className="homeThreeColumnsItem__counter">{props.howMuch}</h2>
-      <p className="homeThreeColumnsItem__header">{props.toWhat}</p>
-      <p className="homeThreeColumnsItem__paragraph">{props.paragraph}</p>
+      <h2 className="homeThreeColumnsItem__counter">{howMuch}</h2>
+      <p className="homeThreeColumnsItem__header">{toWhat}</p>
+      <p className="homeThreeColumnsItem__paragraph">{paragraph}</p>
     </div>
   );
 };

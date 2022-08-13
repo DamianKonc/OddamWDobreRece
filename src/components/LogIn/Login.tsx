@@ -3,6 +3,7 @@ import Navigation from "../Navigation/MainNav";
 import Logo from "../Logo";
 import { Link } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { TextInput } from "./type";
 
 //usenavigate
 
@@ -14,11 +15,11 @@ const Login = () => {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
 
-  const loginIn = (e) => {
+  const loginIn = (e: TextInput) => {
     setLogin(e.currentTarget.value);
   };
 
-  const loginPassword = (e) => {
+  const loginPassword = (e: TextInput) => {
     setPassword(e.currentTarget.value);
   };
 
