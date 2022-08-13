@@ -8,15 +8,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchData } from "../../../app/datasSlicer";
 import { RootState } from "../../../app/store";
 import { switchActive } from "../../../app/activesSlicer";
+import { ItemsType, ChangeOrganizationsType } from "./type";
 
 const Helping = () => {
-  interface Items {
-    name: string;
-    need: string;
-    mission: string;
-    ID: number;
-  }
-
   const itemsss = useSelector((state: RootState) => state.datas);
   const dispatch = useDispatch();
 
@@ -35,9 +29,9 @@ const Helping = () => {
 
   const downloading = async () => {
     const querySnapshot = await getDocs(collection(db, helpingTo));
-    const result: Items[] = [];
+    const result: ItemsType[] = [];
     querySnapshot.forEach((doc) => {
-      const items: Items = doc.data() as Items;
+      const items: ItemsType = doc.data() as ItemsType;
 
       result.push(items);
     });
@@ -72,7 +66,7 @@ const Helping = () => {
     pickMessage();
   }, [helpingTo]);
 
-  const changeOrganizationsss = (e) => {
+  const changeOrganizationsss = (e: ChangeOrganizationsType) => {
     switch (e.currentTarget.value) {
       case "Fundacjom":
         setHelpingTo("Fundations");

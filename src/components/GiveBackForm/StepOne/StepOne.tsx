@@ -2,7 +2,7 @@ import React, { useState, FormEvent, ChangeEvent } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../app/store";
 import { change } from "../../../app/chariitySlicer";
-import { Props } from "./type";
+import { Props, ChooseItem } from "./type";
 
 const StepOne = ({ increase }: Props) => {
   const stuff = useSelector((state: RootState) => state.yourCharity.stuff[0]);
@@ -19,7 +19,7 @@ const StepOne = ({ increase }: Props) => {
 
   datas.map((el) => console.log(el));
 
-  const pickingItems = (e: React.FormEvent<EventTarget>): void => {
+  const pickingItems = (e: ChooseItem): void => {
     dispatch(change({ key: "stuff", value: "" }));
     const item = e.target as HTMLInputElement;
     console.log(item.value);

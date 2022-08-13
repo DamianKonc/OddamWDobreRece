@@ -1,19 +1,14 @@
 import React from "react";
+import { Props } from "./type";
 
-type HelpingProps = {
-  name: string;
-  mission: string;
-  need: string;
-};
-
-const HelpingEl = (props: HelpingProps) => {
+const HelpingEl = ({ name, mission, need }: Props) => {
   return (
     <li className="helpingEl">
       <div className="helpingEl__container">
-        <div className="helpingEl__name">Fundacja "{props.name}"</div>
-        <p className="helpingEl__mission">Cel i misja: {props.mission}</p>
+        <div className="helpingEl__name">Fundacja "{name}"</div>
+        <p className="helpingEl__mission">Cel i misja: {mission}</p>
       </div>
-      <p className="helpingEl__need">{props.need}</p>
+      <p className="helpingEl__need">{need}</p>
     </li>
   );
 };

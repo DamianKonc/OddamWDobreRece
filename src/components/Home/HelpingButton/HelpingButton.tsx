@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../app/store";
+import { Props } from "./type";
 
-interface ButtonProps {
-  text: string;
-  changeOrganizations: (params: any) => any;
-}
-
-const HelpingButton = ({ text, changeOrganizations }: ButtonProps) => {
+const HelpingButton = ({ text, changeOrganizations }: Props) => {
   const activeOrganization = useSelector(
     (state: RootState) => state.actives.activeOrganization
   );
