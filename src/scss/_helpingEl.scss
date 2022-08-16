@@ -27,3 +27,27 @@
   font-size: 1.8rem;
   color: $color-border-scrollLink;
 }
+
+@media (max-width: $tabletScreens) {
+  .helpingEl {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: $bigPhoneScreens) {
+  .helpingEl {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .helpingEl__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}

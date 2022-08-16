@@ -17,3 +17,13 @@
 .pagination__active {
   border: 0.75px solid black;
 }
+
+@media (max-width: $bigPhoneScreens) {
+  .pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
