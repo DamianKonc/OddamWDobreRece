@@ -69,3 +69,13 @@
 .login-register__btns__Login {
   cursor: pointer;
 }
+
+@media (max-width: $smallScreens) {
+  .login-register__btns {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .login-register__form {
+    padding: 20px 35px;
+  }
+}

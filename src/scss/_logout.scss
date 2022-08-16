@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin-top: 270px;
 }
 
 .logout__header-wrapper {
@@ -20,4 +22,15 @@
 
 .logout__btn {
   cursor: pointer;
+}
+
+@media (max-width: $smallScreens) {
+  .logout__header-wrapper {
+    width: 100%;
+    padding: 20px;
+    height: 500px;
+  }
+  .logout__btn {
+    margin: 0;
+  }
 }

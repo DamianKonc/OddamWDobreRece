@@ -10,3 +10,11 @@
   height: 3.4rem;
   margin: 2.5rem auto 0;
 }
+
+@media (max-width: $smallScreens) {
+  .headerTitle__img {
+    width: 20rem;
+    background-position: center;
+    background-size: cover;
+  }
+}
