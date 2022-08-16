@@ -34,3 +34,26 @@
   margin-top: 55px;
   margin-bottom: 40px;
 }
+
+@media (max-width: $smallTabletScreens) {
+  .aboutUs {
+    flex-direction: column;
+  }
+  .aboutUs__el {
+    width: 100%;
+    padding: 20px 30px;
+  }
+  .aboutUs__img {
+    background-position: center;
+    height: 700px;
+  }
+}
+
+@media (max-width: $smallScreens) {
+  .aboutUs__el {
+    padding: 10px 20px;
+  }
+  .aboutUs__img {
+    display: none;
+  }
+}
