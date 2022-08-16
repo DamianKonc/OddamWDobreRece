@@ -18,3 +18,13 @@
   display: flex;
   gap: 20px;
 }
+
+@media (max-width: $smallTabletScreens) {
+  .footer {
+    gap: 0;
+    justify-content: space-around;
+  }
+  .footer__socials {
+    margin: 0;
+  }
+}
