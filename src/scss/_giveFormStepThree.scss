@@ -72,3 +72,22 @@ input:checked {
 .giveBackForm__choose-wrapper-el-input-active {
   background-color: #fad648;
 }
+
+@media (max-width: $bigPhoneScreens) {
+  .giveBackFormWrapper-three {
+    align-items: center;
+  }
+  .giveBackForm__choose-wrapper {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .giveBackForm__choose-title-three {
+    text-align: center;
+  }
+  .giveBackForm__choose-title-three-input {
+    display: block;
+    margin-bottom: 20px;
+    width: 80%;
+    margin: 20px auto;
+  }
+}

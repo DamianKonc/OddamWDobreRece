@@ -7,11 +7,11 @@ const GiveBackFormHero = () => {
     <div className="giveBackForm__hero">
       <Navigation />
       <header className="giveBackForm__header">
-        <div className="giveBackForm__header-wrapper">
-          <Logo text={`Oddaj rzeczy, których już nie chcesz POTRZEBUJĄCYM`} />
-        </div>
-        <div className="giveBackForm__image" />
-        <div>
+        <div className="giveBackForm__hero-textWrapper">
+          <div className="giveBackForm__header-wrapper">
+            <Logo text={`Oddaj rzeczy, których już nie chcesz POTRZEBUJĄCYM`} />
+          </div>
+
           <h3 className="giveBackForm__semititle">Wystarczą 4 proste kroki</h3>
           <div className="giveBackForm__steps">
             <div className="giveBackFrom__steps-step">

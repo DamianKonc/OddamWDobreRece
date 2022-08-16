@@ -138,15 +138,17 @@ const StepThree: FC<Props> = ({ increase, decrease }: Props) => {
           />
         </label>
       </div>
-      <button
-        onClick={goBack}
-        className="giveBackFormWrapper__btn giveBackFormWrapper__btn-stepTwo"
-      >
-        Wstecz
-      </button>
-      <button onClick={addItems} className="giveBackFormWrapper__btn">
-        Dalej
-      </button>
+      <div className="btnWrapper">
+        <button
+          onClick={goBack}
+          className="giveBackFormWrapper__btn giveBackFormWrapper__btn-stepTwo"
+        >
+          Wstecz
+        </button>
+        <button onClick={addItems} className="giveBackFormWrapper__btn">
+          Dalej
+        </button>
+      </div>
     </div>
   );
 };

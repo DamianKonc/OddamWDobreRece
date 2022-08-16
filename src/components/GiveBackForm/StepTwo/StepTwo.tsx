@@ -35,7 +35,7 @@ const StepTwo = ({ increase, decrease }: Props) => {
   return (
     <div className="giveBackFormWrapper">
       <p className="giveBackFrom__form-steps">Step 2/4</p>
-      <div>
+      <div className="giveBackFrom__textWrapper">
         <div className="giveBackFrom__form-header mb-30">
           Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
         </div>
@@ -97,15 +97,17 @@ const StepTwo = ({ increase, decrease }: Props) => {
           </div>
         </div>
       </div>
-      <button
-        onClick={goBack}
-        className="giveBackFormWrapper__btn giveBackFormWrapper__btn-stepTwo"
-      >
-        Wstecz
-      </button>
-      <button onClick={addItems} className="giveBackFormWrapper__btn">
-        Dalej
-      </button>
+      <div className="giveBackForm__btn-wrapper">
+        <button
+          onClick={goBack}
+          className="giveBackFormWrapper__btn giveBackFormWrapper__btn-stepTwo"
+        >
+          Wstecz
+        </button>
+        <button onClick={addItems} className="giveBackFormWrapper__btn">
+          Dalej
+        </button>
+      </div>
     </div>
   );
 };

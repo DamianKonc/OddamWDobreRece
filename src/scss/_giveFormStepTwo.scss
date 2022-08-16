@@ -6,3 +6,40 @@
 .mb-300 {
   margin-bottom: 300px;
 }
+
+@media (max-width: $bigPhoneScreens) {
+  .giveBackFrom__textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .giveBackForm__selectContainer-select-title {
+    width: 220px;
+  }
+}
+
+@media (max-width: $smallScreens) {
+  .giveBackForm__btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .giveBackFormWrapper__btn-stepTwo {
+    margin: 0;
+    padding: 20px 55px;
+  }
+  .giveBackForm__selectContainer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .btnWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

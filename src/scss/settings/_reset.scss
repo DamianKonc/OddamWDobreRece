@@ -1,3 +1,4 @@
+@import "./breakPoints";
 *,
 *:before,
 *:after {
@@ -107,4 +108,10 @@ input {
 
 html {
   font-size: 62.5%;
+}
+
+@media (max-width: $smallScreens) {
+  html {
+    font-size: 43.7%;
+  }
 }

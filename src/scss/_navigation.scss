@@ -1,12 +1,16 @@
 @import "./settings/breakPoints";
 .navigation__container {
-  position: relative;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
 }
 
 .navigation {
   padding-top: 2rem;
   margin-right: 10rem;
-  margin-bottom: 210px;
+  background: white;
+  height: 11vh;
   .navigation__list {
     display: flex;
     justify-content: right;
@@ -29,17 +33,22 @@
 @media (max-width: $bigPhoneScreens) {
   .navigation__burger {
     display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 11;
   }
   .navigation {
     display: none;
     top: 0;
-    left: 10%;
+    left: 0;
     flex-direction: column;
     position: fixed;
     background-color: white;
     padding: 20px;
     width: 60%;
     border: 0.75px solid black;
+    height: 40vh;
   }
   .navigation__list {
     display: flex;

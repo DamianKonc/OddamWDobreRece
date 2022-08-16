@@ -15,3 +15,10 @@
 .mainButton:hover {
   cursor: pointer;
 }
+
+@media (max-width: $smallScreens) {
+  .mainButton {
+    width: 205px;
+    height: 60px;
+  }
+}

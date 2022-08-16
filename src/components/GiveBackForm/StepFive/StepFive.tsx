@@ -112,7 +112,6 @@ const StepFive = ({ increase, decrease }: Props) => {
                   Uwagi dla kuriera
                 </div>
                 <div className="divTableCell">
-                  {" "}
                   <FetchingData name="notesForTheCourier" />
                 </div>
               </div>
@@ -120,16 +119,17 @@ const StepFive = ({ increase, decrease }: Props) => {
           </div>
         </div>
       </div>
-
-      <button
-        onClick={goBack}
-        className="giveBackFormWrapper__btn giveBackFormWrapper__btn-stepTwo"
-      >
-        Wstecz
-      </button>
-      <button onClick={confirm} className="giveBackFormWrapper__btn">
-        Potwierdzam
-      </button>
+      <div className="btnWrapper">
+        <button
+          onClick={goBack}
+          className="giveBackFormWrapper__btn giveBackFormWrapper__btn-stepTwo"
+        >
+          Wstecz
+        </button>
+        <button onClick={confirm} className="giveBackFormWrapper__btn">
+          Potwierdzam
+        </button>
+      </div>
     </div>
   );
 };

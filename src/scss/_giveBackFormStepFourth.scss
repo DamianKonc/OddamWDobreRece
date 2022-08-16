@@ -32,3 +32,19 @@
   resize: none;
   width: 256px;
 }
+
+@media (max-width: $smallTabletScreens) {
+  .giveBackForm__fourth-forms {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+  }
+  .giveBackForm__fourth-forms-adresForm {
+    margin: 0;
+  }
+  .giveBackForm__fourth-forms-adresForm-label-text-input {
+    width: 60%;
+  }
+}

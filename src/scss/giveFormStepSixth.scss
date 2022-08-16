@@ -2,3 +2,9 @@
   margin-left: 10%;
   width: 35%;
 }
+
+@media (max-width: $smallTabletScreens) {
+  .giveFormStepSisth-wrapper {
+    margin: 0 auto;
+  }
+}
