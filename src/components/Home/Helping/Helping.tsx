@@ -46,13 +46,13 @@ const Helping = () => {
         );
         changeActiveButtonToOne();
         break;
-      case " nonGovernmentalOrganizations":
+      case "nonGovernmentalOrganizations":
         setMessageText(
           "Zweryfikowane, najlepsze Organizacje pozarządowe sprawdzone przez nas. Nigdy nikt nie był w tak pewny w proponowaniu organizacji jak my."
         );
         changeActiveButtonToOne();
         break;
-      case " localCollection":
+      case "localCollection":
         setMessageText(
           "Znajdź najlepszą zbiórkę dla siebie. Możesz śmiało kontaktować się z organizatorami, są w Twojej okolicy. Możemy ich polecić z głębi serca, a serca mamy wielkie!!"
         );
@@ -73,11 +73,11 @@ const Helping = () => {
         changeAtiveOrganization("Fundacjom");
         break;
       case "Organizajom pozarządowym":
-        setHelpingTo(" nonGovernmentalOrganizations");
+        setHelpingTo("nonGovermentalOrganizations");
         changeAtiveOrganization("Organizajom pozarządowym");
         break;
       case "Lokalnym zbiórkom":
-        setHelpingTo(" localCollection");
+        setHelpingTo("localCollection");
         changeAtiveOrganization("Lokalnym zbiórkom");
         break;
     }
